@@ -1,0 +1,36 @@
+<footer id="footer" class="ui inverted segment">
+  <div class="ui center aligned container">
+    <div class="ui inverted horizontal divided link list">
+      {% if site.facebook %}
+      <a class="item" href="{{site.facebook}}">
+        <i class="facebook icon"></i>
+        Facebook
+      </a>
+      {% endif %}
+      {% if site.github %}
+      <a class="item" href="{{ site.github }}">
+        <i class="github icon"></i>
+        Github
+      </a>
+      {% endif %}
+      {% if site.linkedin%}
+      <a class="item" href="{{ site.linkedin }}">
+        <i class="linkedin icon"></i>
+        Linkedin
+      </a>
+      {% endif %}
+      {% if site.stack_overflow %}
+      <a class="item" href="{{ site.stack_overflow }}">
+        <i class="stack overflow icon"></i>
+        Stack Overflow
+      </a>
+      {% endif %}
+      {% if site.twitter %}
+      <a class="item" href="{{ site.twitter }}">
+        <i class="twitter icon"></i>
+        Twitter
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</footer>
