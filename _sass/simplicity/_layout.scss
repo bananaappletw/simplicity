@@ -1,0 +1,20 @@
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#header{
+  flex: none;
+  border-radius: 0;
+}
+
+main{
+  flex: 1 0 auto;
+  background-color: pink;
+}
+
+#footer{
+  flex: none;
+  border-radius: 0;
+}
