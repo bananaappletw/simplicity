@@ -5,8 +5,10 @@ host: 0.0.0.0
 theme: simplicity
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Theme settings
+paginate: 10
 disqus_username: bananaappletw
 twitter: https://twitter.com/bananaappletw
 github: https://github.com/bananaappletw

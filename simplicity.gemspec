@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "simplicity"
-  spec.version       = "0.0.5"
+  spec.version       = "0.0.6"
   spec.authors       = ["bananaappletw"]
   spec.email         = ["bananaappletw@gmail.com"]
 
@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 3.5"
   spec.add_runtime_dependency "jekyll-feed"
+  spec.add_runtime_dependency "jekyll-paginate"
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"

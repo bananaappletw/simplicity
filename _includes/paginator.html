@@ -1,0 +1,15 @@
+<nav class="ui pagination menu">
+  {% if paginator.previous_page %}
+    {% include first_page.html %}
+    {% include prev_page.html %}
+  {% endif %}
+
+	{% for page in (1..paginator.total_pages) %}
+    {% include page.html %}
+	{% endfor %}
+
+  {% if paginator.next_page %}
+    {% include next_page.html %}
+    {% include last_page.html %}
+  {% endif %}
+</nav>

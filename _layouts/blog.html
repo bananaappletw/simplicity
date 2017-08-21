@@ -6,7 +6,7 @@ layout: default
   <article class="ui green raised segment">
   <h1 class="header">Posts</h1>
     <div class="ui items">
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
       <div class="item">
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         <div class="content">
@@ -20,10 +20,10 @@ layout: default
       </div>
       {% endfor %}
     </div>
+  {% include paginator.html %}
   </article>
 </div>
 
-{{ content }}
 
 <div class="four wide column">
   {% include sidebar.html %}
