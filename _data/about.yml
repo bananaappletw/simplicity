@@ -1,0 +1,73 @@
+profile: '/assets/profile.jpg'
+
+educations:
+  - name: National Chiao Tung University
+    logo: '/assets/nctu-logo.jpg'
+    link: http://www.nctu.edu.tw/
+    degree: Master's Degree
+    period: 2016~2017
+
+  - name: National Chiao Tung University
+    logo: '/assets/nctu-logo.jpg'
+    link: http://www.nctu.edu.tw/
+    degree: Bachelor's Degree
+    period: 2012~2016
+
+organizations:
+  - name: 'Bamboofox'
+    link: https://bamboofox.github.io/
+    logo: '/assets/bamboofox.png'
+    position: member
+    period: 2014~present
+
+  - name: 'Cyber Security Club'
+    link: https://www.facebook.com/NCTUCSC/
+    logo: '/assets/nctucsc.png'
+    position: Vice president and lecturer
+    period: 2015~2016
+
+  - name: 'NCTU Stunion'
+    logo: '/assets/nctustunion.jpg'
+    position: Web developer and system administer
+    link: https://stunion.nctu.edu.tw
+    period: 2013~2016
+
+skills:
+  - name: 'Security'
+    score: 10
+  - name: 'Linux'
+    score: 10
+  - name: 'Ruby on Rails'
+    score: 9
+  - name: 'Koa'
+    score: 7
+  - name: 'Django'
+    score: 6
+
+programming_languages:
+  - name: 'C'
+    score: 10
+  - name: 'C++'
+    score: 7
+  - name: 'Python'
+    score: 9
+  - name: 'Javascript'
+    score: 8
+  - name: 'Ruby'
+    score: 6
+  - name: 'Css3'
+    score: 6
+  - name: 'Html'
+    score: 6
+
+talks:
+  - name: gdb
+    link: <script async class="speakerdeck-embed" data-id="624ae2b26a9c46988a6e2ac5e8a0c4f9" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+  - name: x86
+    link: <script async class="speakerdeck-embed" data-id="4cf4e3d913c143faaf5a60dd0e23edd8" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+  - name: some tips
+    link: <script async class="speakerdeck-embed" data-id="001614528654488c806224f3f5403918" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+  - name: python
+    link: <script async class="speakerdeck-embed" data-id="2cec1e0a61164095b9e166310708b0cf" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+  - name: ctf for beginner
+    link: <script async class="speakerdeck-embed" data-id="5ac2ad9213444d51b4c6b04567aa3c31" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
