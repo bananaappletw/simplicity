@@ -19,10 +19,8 @@ layout: default
     {{ content }}
   </div>
 
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
   </article>
+  {% include disqus_comments.html %}
 </div>
 <div class="four wide column">
   {% include sidebar.html %}
