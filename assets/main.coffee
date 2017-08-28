@@ -2,3 +2,4 @@
 ---
 $ ->
   $(".progress").progress();
+  $('.accordion').accordion();
