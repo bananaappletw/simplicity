@@ -1,7 +1,7 @@
 # simplicity
 
 [Theme preview](https://bananaappletw.github.io/)
-![simplicity theme preview](/screenshot.png)
+![simplicity theme preview](/demo.gif)
 
 ## Installation
 
