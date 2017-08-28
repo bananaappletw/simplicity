@@ -6,7 +6,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/bananaappletw/simplicity/ -o [your_github_username].github.io
+git clone https://github.com/bananaappletw/simplicity/ [your_github_username].github.io
 cd [your_github_username].github.io
 bundle install
 jekyll serve
