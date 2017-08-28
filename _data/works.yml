@@ -1,3 +1,13 @@
+- name: 'simplicity'
+  description: >
+          Jekyll theme built with semantic-ui and flexbox
+  github: 'https://github.com/bananaappletw/simplicity'
+  preview: '/assets/simplicity.gif'
+  tags:
+    - jekyll-theme
+    - semantic-ui
+    - flexbox
+
 - name: 'SymGDB'
   description: >
           symbolic execution plugin for gdb
@@ -20,6 +30,7 @@
     - Multiple OAuth provider
     - Devise
     - cancancan
+    - semantic-ui
 
 - name: 'Koa2 examples'
   description: >
