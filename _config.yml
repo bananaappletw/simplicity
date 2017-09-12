@@ -6,6 +6,7 @@ theme: simplicity
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
 
 # Theme settings
 paginate: 10
