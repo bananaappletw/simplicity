@@ -3,8 +3,8 @@ layout: post
 title: Virtualization
 author: bananaapple
 tags:
-  - 'virtualization '
-  - ''
+  - 'virtualization'
+
 categories:
   - computer science
 date: 2016-11-18 15:07:00

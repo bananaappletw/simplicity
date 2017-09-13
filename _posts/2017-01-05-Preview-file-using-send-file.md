@@ -5,7 +5,7 @@ author: bananaapple
 tags:
   - ruby on rails
   - send_file
-  - ''
+
 categories:
   - computer science
 date: 2017-01-05 16:15:00
