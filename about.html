@@ -104,3 +104,12 @@ Specialized in Ruby on Rails.
   </div>
   {% endfor %}
 </div>
+
+<h2>Resume</h2>
+<div>
+  {{about.resume.description | newline_to_br}}
+  <a href="/{{about.resume.link}}">
+  <i class="download icon"></i>
+    Download the resume
+  </a>
+</div>

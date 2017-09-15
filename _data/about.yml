@@ -37,28 +37,28 @@ skills:
     score: 10
   - name: 'Linux'
     score: 10
-  - name: 'Ruby on Rails'
-    score: 9
-  - name: 'Koa'
+  - name: 'Binary exploitation'
+    score: 8
+  - name: 'GDB'
     score: 7
-  - name: 'Django'
+  - name: 'Symbolic execution'
+    score: 7
+  - name: 'Ruby on Rails'
     score: 6
+  - name: 'Django'
+    score: 5
 
 programming_languages:
   - name: 'C'
     score: 10
-  - name: 'C++'
-    score: 7
   - name: 'Python'
     score: 9
-  - name: 'Javascript'
-    score: 8
+  - name: 'C++'
+    score: 7
   - name: 'Ruby'
     score: 6
-  - name: 'Css3'
-    score: 6
-  - name: 'Html'
-    score: 6
+  - name: 'Javascript'
+    score: 5
 
 talks:
   - name: gdb
@@ -73,3 +73,11 @@ talks:
     link: <script async class="speakerdeck-embed" data-id="5ac2ad9213444d51b4c6b04567aa3c31" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
   - name: triton and symbolic execution on gdb
     link: <script async class="speakerdeck-embed" data-id="5f0492a3f3aa412cb734cab17de7b280" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+resume:
+  description: >
+          Currently, I am looking for jobs of security industry.
+          Here is my resume.
+          If you are interested in me, please contact me.
+
+  link: 'assets/resume.pdf'
