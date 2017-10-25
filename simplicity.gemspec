@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "simplicity"
-  spec.version       = "0.0.16"
+  spec.version       = "0.0.17"
   spec.authors       = ["bananaappletw"]
   spec.email         = ["bananaappletw@gmail.com"]
 
@@ -13,6 +13,9 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }
 
   spec.add_runtime_dependency "jekyll", "~> 3.5"
+  spec.add_runtime_dependency "sprockets", "~> 3.0"
+  spec.add_runtime_dependency "jekyll-assets"
+  spec.add_runtime_dependency "semantic-ui-sass"
   spec.add_runtime_dependency "jekyll-coffeescript"
   spec.add_runtime_dependency "jekyll-paginate"
   spec.add_runtime_dependency "jekyll-feed"

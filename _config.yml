@@ -4,6 +4,7 @@ host: 0.0.0.0
 # Build settings
 theme: simplicity
 plugins:
+  - jekyll-assets
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
@@ -19,3 +20,6 @@ linkedin: https://www.linkedin.com/in/bananaappletw/
 disqus:
   shortname: bananaappletw
 google_analytics: UA-105275050-1
+assets:
+  sources:
+    - "assets/"
