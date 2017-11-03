@@ -8,6 +8,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - semantic-ui-sass
 
 # Theme settings
 paginate: 10

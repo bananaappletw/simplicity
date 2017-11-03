@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "simplicity"
-  spec.version       = "0.0.19"
+  spec.version       = "0.0.20"
   spec.authors       = ["bananaappletw"]
   spec.email         = ["bananaappletw@gmail.com"]
 
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-paginate"
   spec.add_runtime_dependency "jekyll-feed"
   spec.add_runtime_dependency "jekyll-sitemap"
+  spec.add_runtime_dependency "semantic-ui-sass"
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
