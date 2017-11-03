@@ -62,17 +62,19 @@ programming_languages:
 
 talks:
   - name: gdb
-    link: <script async class="speakerdeck-embed" data-id="624ae2b26a9c46988a6e2ac5e8a0c4f9" data-ratio="1.77777777777778" src="//speakerdeck.com/_assets/embed.js"></script>
+    link: <script async class="speakerdeck-embed" data-id="624ae2b26a9c46988a6e2ac5e8a0c4f9" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
   - name: x86
-    link: <script async class="speakerdeck-embed" data-id="4cf4e3d913c143faaf5a60dd0e23edd8" data-ratio="1.77777777777778" src="//speakerdeck.com/_assets/embed.js"></script>
+    link: <script async class="speakerdeck-embed" data-id="4cf4e3d913c143faaf5a60dd0e23edd8" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
   - name: some tips
-    link: <script async class="speakerdeck-embed" data-id="001614528654488c806224f3f5403918" data-ratio="1.77777777777778" src="//speakerdeck.com/_assets/embed.js"></script>
+    link: <script async class="speakerdeck-embed" data-id="001614528654488c806224f3f5403918" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
   - name: python
-    link: <script async class="speakerdeck-embed" data-id="2cec1e0a61164095b9e166310708b0cf" data-ratio="1.77777777777778" src="//speakerdeck.com/_assets/embed.js"></script>
+    link: <script async class="speakerdeck-embed" data-id="2cec1e0a61164095b9e166310708b0cf" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
   - name: ctf for beginner
-    link: <script async class="speakerdeck-embed" data-id="5ac2ad9213444d51b4c6b04567aa3c31" data-ratio="1.77777777777778" src="//speakerdeck.com/_assets/embed.js"></script>
+    link: <script async class="speakerdeck-embed" data-id="5ac2ad9213444d51b4c6b04567aa3c31" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
   - name: triton and symbolic execution on gdb
-    link: <script async class="speakerdeck-embed" data-id="5f0492a3f3aa412cb734cab17de7b280" data-ratio="1.77777777777778" src="//speakerdeck.com/_assets/embed.js"></script>
+    link: <script async class="speakerdeck-embed" data-id="5f0492a3f3aa412cb734cab17de7b280" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+  - name: Klee and Angr
+    link: <script async class="speakerdeck-embed" data-id="2c2fa77f6f9a4fc182dca9e04ed035fe" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 resume:
   description: >
