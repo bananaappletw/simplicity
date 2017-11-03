@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "simplicity"
-  spec.version       = "0.0.18"
+  spec.version       = "0.0.19"
   spec.authors       = ["bananaappletw"]
   spec.email         = ["bananaappletw@gmail.com"]
 
@@ -14,7 +14,6 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 3.5"
   spec.add_runtime_dependency "jekyll-assets"
-  spec.add_runtime_dependency "semantic-ui-sass"
   spec.add_runtime_dependency "jekyll-coffeescript"
   spec.add_runtime_dependency "jekyll-paginate"
   spec.add_runtime_dependency "jekyll-feed"
