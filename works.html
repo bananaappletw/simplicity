@@ -10,7 +10,7 @@ permalink: /works/
   {% for work in site.data.works %}
   <div class="ui card">
     <div class="ui image">
-      <img src="{{work.preview}}">
+      <img src="{% asset_path {{work.preview}} %}">
     </div>
     <div class="content">
       <div class="ui header">{{work.name}}</div>

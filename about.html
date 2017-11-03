@@ -17,7 +17,7 @@ Specialized in Ruby on Rails.
 {% endcapture %}
 
 <div class="ui clearing basic segment">
-  <img class="ui small left floated rounded image" src="{{about.profile}}">
+  <img class="ui small left floated rounded image" src="{% asset_path {{about.profile}} %}">
   {{ string_with_newlines | newline_to_br }}
 </div>
 
@@ -26,7 +26,7 @@ Specialized in Ruby on Rails.
   {% for education in about.educations %}
   <div class="item">
     <div class="ui tiny rounded image">
-      <img src="{{education.logo}}">
+      <img src="{% asset_path {{education.logo}} %}">
     </div>
     <div class="content">
       <a class="header" href="{{education.link}}">
@@ -50,7 +50,7 @@ Specialized in Ruby on Rails.
   {% for organization in about.organizations %}
   <div class="item">
     <div class="ui tiny rounded image">
-      <img src="{{organization.logo}}">
+      <img src="{% asset_path {{organization.logo}} %}">
     </div>
     <div class="content">
       <a class="header" href="{{organization.link}}">

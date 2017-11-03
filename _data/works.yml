@@ -2,7 +2,7 @@
   description: >
           Jekyll theme built with semantic-ui and flexbox
   github: 'https://github.com/bananaappletw/simplicity'
-  preview: '/assets/simplicity.gif'
+  preview: 'simplicity.gif'
   tags:
     - jekyll-theme
     - semantic-ui
@@ -12,7 +12,7 @@
   description: >
           symbolic execution plugin for gdb
   github: 'https://github.com/SQLab/symgdb'
-  preview: '/assets/symgdb.gif'
+  preview: 'symgdb.gif'
   tags:
     - Python
     - Triton
@@ -23,7 +23,7 @@
   description: >
           Bamboofox CTF training platform
   github: 'https://github.com/bamboofox/bamboofox-website'
-  preview: '/assets/bamboofox-website.gif'
+  preview: 'bamboofox-website.gif'
   tags:
     - Ruby on rails
     - CTF
@@ -36,7 +36,7 @@
   description: >
           Examples for Koa2
   github: 'https://github.com/bananaappletw/koa2-examples'
-  preview: '/assets/koa2-examples.png'
+  preview: 'koa2-examples.png'
   tags:
     - Koa
     - async
@@ -46,7 +46,7 @@
           Design a malicious email detection system depends on cuckoo sandbox
           Self-implement Python module to communicate with cuckoo sandbox
           Using Django to implement the system, combined with celery as background worker, and PostgreSQL as database Process 300 emails per hour
-  preview: '/assets/med.gif'
+  preview: 'med.gif'
   tags:
     - Django
     - celery
@@ -55,7 +55,7 @@
 - name: 'NCTU Review'
   description: >
           Teacher's review website
-  preview: '/assets/nctu-review.png'
+  preview: 'nctu-review.png'
   tags:
     - Php
     - ptt crawler
@@ -63,7 +63,7 @@
 - name: 'NCTU Restaurant Survey'
   description: >
           Restaurant survey for nctu students
-  preview: '/assets/nctu-restaurant-survey.png'
+  preview: 'nctu-restaurant-survey.png'
   tags:
     - Php
     - pop3 authentication
