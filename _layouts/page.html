@@ -1,14 +1,22 @@
 ---
 layout: default
 ---
-<div class="fourteen wide column">
-  <article class="ui green raised segment">
-    <header>
-      <h1 class="post-title">{{ page.title | escape }}</h1>
-    </header>
-    <div class="post-content">
-      {{ content }}
+{% include header.html %}
+<section class="hero is-medium is-black is-bold">
+  <div class="hero-body banner">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        {{ page.title | capitalize | escape }}
+      </h1>
     </div>
-  </article>
+  </div>
+</section>
+<main id="main" class="section">
+<section class="container is-fluid">
+  <section class="section">
+    {{ content }}
+  </section>
   {% include disqus_comments.html %}
-</div>
+</section>
+</main>
+{% include footer.html %}

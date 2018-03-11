@@ -1,27 +1,23 @@
 ---
-layout: default
+layout: page
+comments: true
 ---
-<div class="ten wide column">
-  <article class="ui green raised segment">
-  <header>
-    <h1 class="header">{{ page.title | escape }}</h1>
-    <p>
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
-      </time>
-      {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
-  </header>
-
-  <div class="ui text">
+<div class="box">
+  <div class="content">
+    <a class="title" href="{{ post.url | relative_url }}">
+      {{ page.title | capitalize |escape }}
+    </a>
+    <div class="meta">
+      {{ page.date | date: site.date_format }}
+      <div class="tags">
+        {% for tag in page.tags %}
+        <a class="tag">
+          {{ tag }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
     {{ content }}
   </div>
-
-  </article>
-  {% include disqus_comments.html %}
 </div>
-<div class="four wide column">
-  {% include sidebar.html %}
-</div>
+{% include disqus_comments.html %}

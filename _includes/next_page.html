@@ -1,3 +1,11 @@
-<a href="{{ paginator.next_page_path }}" class="item">
-  <i class="right arrow icon"></i>
+<a class="pagination-next"
+{% if paginator.next_page %}
+href="{{ paginator.next_page_path }}"
+{% else %}
+disabled
+{% endif %}
+>
+  <span class="icon">
+      <i class="fas fa-arrow-right"></i>
+  </span>
 </a>

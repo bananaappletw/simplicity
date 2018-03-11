@@ -7,9 +7,9 @@
   {% else %}
     {{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}
   {% endif %}
-" class="item
+" class="pagination-link
   {% if page == paginator.page %}
 
-   active
+   is-current
   {% endif %}
 ">{{ page }}</a>

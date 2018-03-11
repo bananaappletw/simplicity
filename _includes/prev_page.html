@@ -1,3 +1,11 @@
-<a href="{{ paginator.previous_page_path }}" class="item">
-  <i class="left arrow icon"></i>
+<a class="pagination-previous"
+{% if paginator.previous_page %}
+href="{{ paginator.previous_page_path }}"
+{% else %}
+disabled
+{% endif %}
+>
+  <span class="icon">
+      <i class="fas fa-arrow-left"></i>
+  </span>
 </a>

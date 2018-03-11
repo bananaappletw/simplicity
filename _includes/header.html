@@ -1,26 +1,37 @@
-<header id="header" class="ui stackable inverted menu">
-  <div class="left menu">
-    {% assign default_paths = site.pages | map: "path" %}
-    {% assign page_paths = site.header_pages | default: default_paths %}
-    <a class="item ui image" href="{{ "/" | relative_url }}">
-      <img src="{% asset_path icon_avatar.jpg %}" alt="Icon avatar" />
-    </a>
-    {% if page_paths %}
-      {% for path in page_paths %}
-        {% assign my_page = site.pages | where: "path", path | first %}
-        {% if my_page.title %}
-          <a class="item" href="{{ my_page.url | relative_url }}">
-            <i class="{{my_page.icon}} icon"></i>
-            {{ my_page.title | escape }}
-          </a>
+<header>
+  <nav class="navbar is-dark">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ "/" | relative_url }}">
+        {% asset icon_avatar.jpg %}
+      </a>
+      <div class="navbar-burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-start">
+        {% assign pages = site.pages | sort: 'title' %}
+        {% for page in pages %}
+        {% if page.title and page.autogen == nil %}
+        <a class="navbar-item" href="{{ page.url | relative_url }}">
+          <span class="icon">
+            <i class="fas fa-{{page.icon}}"></i>
+          </span>
+          {{ page.title | capitalize }}
+        </a>
         {% endif %}
-      {% endfor %}
-    {% endif %}
-  </div>
-  <div class="right menu">
-    <a class="item" href="{{ "/feed.xml" | relative_url }}">
-      <i class="rss icon"></i>
-      Subscribe
-    </a>
-  </div>
+        {% endfor %}
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="{{ "/feed.xml" | relative_url }}">
+          <span class="icon">
+            <i class="fas fa-rss"></i>
+          </span>
+          Subscribe
+        </a>
+      </div>
+    </div>
+  </nav>
 </header>

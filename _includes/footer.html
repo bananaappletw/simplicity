@@ -1,42 +1,51 @@
-<footer id="footer" class="ui inverted segment">
-
-  <div class="ui center aligned container">
-    <div>
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
       Theme by
-      <a class="item" href="https://github.com/bananaappletw/simplicity/">
-        <i class="github icon"></i>
+      <a href="https://github.com/bananaappletw/simplicity/">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
         simplicity
       </a>
-    </div>
-    <div class="ui inverted divider"></div>
-    <div class="ui inverted horizontal divided link list">
+      <br>
       {% if site.facebook %}
-      <a class="item" href="{{site.facebook}}">
-        <i class="facebook icon"></i>
+      <a href="{{site.facebook}}">
+        <span class="icon">
+          <i class="fab fa-facebook"></i>
+        </span>
         Facebook
       </a>
       {% endif %}
       {% if site.github %}
-      <a class="item" href="{{ site.github }}">
-        <i class="github icon"></i>
+      <a href="{{ site.github }}">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
         Github
       </a>
       {% endif %}
       {% if site.linkedin%}
-      <a class="item" href="{{ site.linkedin }}">
-        <i class="linkedin icon"></i>
+      <a href="{{ site.linkedin }}">
+        <span class="icon">
+          <i class="fab fa-linkedin"></i>
+        </span>
         Linkedin
       </a>
       {% endif %}
       {% if site.stack_overflow %}
-      <a class="item" href="{{ site.stack_overflow }}">
-        <i class="stack overflow icon"></i>
+      <a href="{{ site.stack_overflow }}">
+        <span class="icon">
+          <i class="fab fa-stack-overflow"></i>
+        </span>
         Stack Overflow
       </a>
       {% endif %}
       {% if site.twitter %}
-      <a class="item" href="{{ site.twitter }}">
-        <i class="twitter icon"></i>
+      <a href="{{ site.twitter }}">
+        <span class="icon">
+          <i class="fab fa-twitter"></i>
+        </span>
         Twitter
       </a>
       {% endif %}

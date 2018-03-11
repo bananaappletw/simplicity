@@ -1,0 +1,60 @@
+$black: hsl(0, 0%, 4%);
+$grey-darker:  hsl(0, 0%, 21%);
+$background-color: #1f1f1f;
+$footer-background-color: $grey-darker;
+$pagination-color: white;
+
+#main{
+  background-color: $background-color;
+}
+
+.article-box
+{
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.work-card
+{
+  width: 300px;
+  height: 100%;
+  .card-image
+  {
+    img
+    {
+      height: 150px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.talk-card
+{
+  width: 300px;
+  height: 100%;
+}
+
+.banner
+{
+  background-image: asset_url("banner.jpg");
+  background-image: linear-gradient(to bottom, hsla(0, 0%, 21%,0.6) 0%,hsla(0, 0%, 21%,0.6) 100%), asset_url("banner.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.is-horizontal-center {
+  justify-content: center;
+}
+
+.profile-image{
+  height: 256px;
+  border-radius: 50%;
+}
+
+.footer{
+  color: white;
+}

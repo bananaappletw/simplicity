@@ -1,38 +1,7 @@
 ---
-layout: page
-title: Works
+layout: works
+title: works
 icon: trophy
 comments: true
 permalink: /works/
 ---
-
-<div class="ui cards">
-  {% for work in site.data.works %}
-  <div class="ui card">
-    <div class="ui image">
-      <img src="{% asset_path {{work.preview}} %}">
-    </div>
-    <div class="content">
-      <div class="ui header">{{work.name}}</div>
-      <div class="meta">
-      {% for tag in work.tags %}
-      <a class="ui mini basic label">
-        {{tag}}
-      </a>
-      {% endfor %}
-      {% if work.github %}
-      <div class="ui items">
-        <a class="item" href="{{work.github}}">
-          <i class="ui icon github"></i>
-          Github
-        </a>
-      </div>
-      {% endif %}
-      </div>
-      <div class="description">
-        {{work.description}}
-      </div>
-    </div>
-  </div>
-  {% endfor %}
-</div>

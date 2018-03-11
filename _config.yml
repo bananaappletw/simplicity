@@ -1,18 +1,45 @@
+# Blog config
+url: bananaappletw.github.io
+date_format: "%b %-d, %Y"
+
 # jekyll serve
+
 host: 0.0.0.0
 
 # Build settings
-theme: simplicity
+
 plugins:
   - jekyll-assets
+  - jekyll-coffeescript
   - jekyll-feed
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
-  - semantic-ui-sass
+  - font-awesome-sass
+  - bulma-sass
+
+# Jekyll-assets
+
+assets:
+  caching:
+    type: memory
+
+# Jekyll-paginate-v2
+
+pagination:
+  per_page: 5
+  enabled: true
+  debug: true
+  sort_field: 'date'
+  sort_reverse: true
+
+
+# Jekyll-tagging
+
+tag_page_layout: tags
+tag_page_dir: tags
 
 # Theme settings
-paginate: 10
-disqus_username: bananaappletw
+
 twitter: https://twitter.com/bananaappletw
 github: https://github.com/bananaappletw
 stack_overflow: https://stackoverflow.com/users/4446356/bananaappletw
@@ -21,3 +48,4 @@ linkedin: https://www.linkedin.com/in/bananaappletw/
 disqus:
   shortname: bananaappletw
 google_analytics: UA-105275050-1
+encoding: utf-8

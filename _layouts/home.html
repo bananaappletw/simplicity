@@ -1,0 +1,67 @@
+---
+layout: default
+---
+{% assign home = site.data.home %}
+
+{% include header.html %}
+<section id="main" class="hero is-fullheight is-dark">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="content">
+        {% asset {{home.profile}} class="profile-image"%}
+        <h1 class="title">
+          Programmable animal - sea cucumber
+        </h1>
+        <h2 class="subtitle">
+          #bananaappletw
+        </h2>
+        {% if site.facebook %}
+        <a href="{{site.facebook}}">
+          <span class="icon">
+            <i class="fab fa-facebook"></i>
+          </span>
+          Facebook
+        </a>
+        {% endif %}
+        {% if site.github %}
+        <a href="{{ site.github }}">
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          Github
+        </a>
+        {% endif %}
+        {% if site.linkedin %}
+        <a href="{{ site.linkedin }}">
+          <span class="icon">
+            <i class="fab fa-linkedin"></i>
+          </span>
+          Linkedin
+        </a>
+        {% endif %}
+        {% if site.stack_overflow %}
+        <a href="{{ site.stack_overflow }}">
+          <span class="icon">
+            <i class="fab fa-stack-overflow"></i>
+          </span>
+          Stack Overflow
+        </a>
+        {% endif %}
+        {% if site.twitter %}
+        <a href="{{ site.twitter }}">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+          Twitter
+        </a>
+        {% endif %}
+      </div>
+      <a class="button" href="{{ "/" | relative_url }}">
+        Read my articles
+      </a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    {% include footer.html %}
+  </div>
+</section>

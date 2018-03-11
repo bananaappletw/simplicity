@@ -1,15 +1,13 @@
-<nav class="ui pagination menu">
-  {% if paginator.previous_page %}
-    {% include first_page.html %}
+<section class="section">
+  <nav class="pagination is-centered is-large" role="navigation" aria-label="pagination">
     {% include prev_page.html %}
-  {% endif %}
-
-	{% for page in (1..paginator.total_pages) %}
-    {% include page.html %}
-	{% endfor %}
-
-  {% if paginator.next_page %}
     {% include next_page.html %}
-    {% include last_page.html %}
-  {% endif %}
-</nav>
+    <ul class="pagination-list">
+      {% for page in (1..paginator.total_pages) %}
+      <li>
+        {% include page.html %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</section>

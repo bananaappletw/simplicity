@@ -1,0 +1,140 @@
+---
+layout: page
+---
+{% assign about = site.data.about %}
+{% capture string_with_newlines %}
+Hello, I am Wei Bo Chen.
+
+I am a CTF player and web developer.
+
+He is responsible for website development and club lecturer in bamboofox.
+
+Specialized in Ruby on Rails.
+{% endcapture %}
+
+<div class="box">
+  <h1 class="title">About</h1>
+  <div class="box">
+    <article class="media">
+      <div class="media-left">
+        {% asset {{about.profile}} class="image is-128x128" %}
+      </div>
+      <div class="media-content">
+        <div class="content">
+          {{ string_with_newlines | newline_to_br }}
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <h1 class="title">Education</h1>
+  <div class="columns">
+    {% for education in about.educations %}
+    <div class="column is-narrow">
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <div class="image is-128x128">
+              {% asset {{education.logo}} %}
+            </div>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <a class="link" href="{{education.link}}">
+                {{education.name}}
+              </a>
+              <br>
+              <span class="icon">
+                <i class="fas fa-graduation-cap"></i>
+              </span>
+              {{education.degree}}
+              <br>
+              <span class="icon">
+                <i class="fas fa-calendar"></i>
+              </span>
+              {{education.period}}
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h1 class="title">Organizations</h1>
+  <div class="columns">
+    {% for organization in about.organizations %}
+    <div class="column is-narrow">
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <div class="image is-128x128">
+              {% asset {{organization.logo}} %}
+            </div>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <a class="link" href="{{organization.link}}">
+                {{organization.name}}
+              </a>
+              <br>
+              <span class="icon">
+                <i class="fas fa-user"></i>
+              </span>
+              {{organization.position}}
+              <br>
+              <span class="icon">
+                <i class="fas fa-calendar"></i>
+              </span>
+              {{organization.period}}
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h1 class="title">Skills</h1>
+  <div class="field is-grouped is-grouped-multiline">
+    {% for skill in about.skills %}
+    <div class="control">
+      <div class="tags has-addons">
+        <span class="tag is-dark">{{ skill.name }}</span>
+        <span class="tag is-info">{{ skill.score | times: 10 }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <h1 class="title">Programming Languages</h1>
+  <div class="field is-grouped is-grouped-multiline">
+    {% for programming_language in about.programming_languages %}
+    <div class="control">
+      <div class="tags has-addons">
+        <span class="tag is-dark">{{ programming_language.name }}</span>
+        <span class="tag is-info">{{ programming_language.score | times: 10 }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h1 class="title">Talks</h1>
+  <div class="columns is-multiline">
+    {% for talk in about.talks %}
+    <div class="column is-narrow">
+      {{talk.link}}
+    </div>
+    {% endfor %}
+  </div>
+
+  <h1 class="title">Resume</h1>
+  <div class="content">
+    {{ about.resume.description | newline_to_br}}
+    <a href="{{ about.resume.link }}">
+      <span class="icon">
+        <i class="fas fa-download"></i>
+      </span>
+      Download the resume
+    </a>
+  </div>
+</div>
