@@ -130,7 +130,8 @@ Specialized in Ruby on Rails.
   <h1 class="title">Resume</h1>
   <div class="content">
     {{ about.resume.description | newline_to_br}}
-    <a href="{{ about.resume.link }}">
+    {% asset {{about.resume.link}} %}
+    <a href="{{ assets["resume.pdf"].digest_path }}">
       <span class="icon">
         <i class="fas fa-download"></i>
       </span>
