@@ -7,7 +7,7 @@
   {% else %}
     {{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}
   {% endif %}
-" class="pagination-link
+" class="pagination-link has-background-white
   {% if page == paginator.page %}
 
    is-current

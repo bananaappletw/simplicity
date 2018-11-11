@@ -1,20 +1,5 @@
-$black: hsl(0, 0%, 4%);
-$grey-darker:  hsl(0, 0%, 21%);
-$background-color: #1f1f1f;
-$footer-background-color: $grey-darker;
-$pagination-color: white;
-
-#main{
-  background-color: $background-color;
-}
-
-.article-box
-{
-  position: relative;
-  height: 300px;
-  overflow: hidden;
-}
-
+$pagination-current-color: $link;
+$pagination-background-color: $white;
 .work-card
 {
   width: 300px;
@@ -46,15 +31,7 @@ $pagination-color: white;
   background-position: center;
 }
 
-.is-horizontal-center {
-  justify-content: center;
-}
-
 .profile-image{
   height: 256px;
   border-radius: 50%;
-}
-
-.footer{
-  color: white;
 }

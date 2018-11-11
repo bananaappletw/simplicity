@@ -1,13 +1,13 @@
 ---
-layout: post
 title: Review of bamboofox platform
-categories: 
+layout: post
+categories:
 - computer science
-tags: 
+tags:
 - ruby on rails
 ---
 
-大概記錄一下心得
+記錄一下寫 bamboofox 平台的心得
 
 其實當初這個平台是為了 migrate 以前的課程所建置的
 
