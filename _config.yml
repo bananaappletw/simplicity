@@ -27,11 +27,11 @@ assets:
 
 pagination:
   per_page: 5
+  permalink: '/:num/'
   enabled: true
   debug: true
   sort_field: 'date'
   sort_reverse: true
-
 
 # Jekyll-tagging
 

@@ -3,11 +3,11 @@
     {% include prev_page.html %}
     {% include next_page.html %}
     <ul class="pagination-list">
-      {% for page in (1..paginator.total_pages) %}
-      <li>
-        {% include page.html %}
-      </li>
+      {% if paginator.page_trail %}
+      {% for trail in paginator.page_trail %}
+        {% include page.html trail=trail %}
       {% endfor %}
+      {% endif %}
     </ul>
   </nav>
 </section>
