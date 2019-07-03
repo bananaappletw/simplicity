@@ -37,4 +37,4 @@ fields:
   hidden: true
   default: now
 pages:
-- _posts/test-from-forestry.md
+- _posts/2019-07-03-test-from-forestry.md
