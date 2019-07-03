@@ -30,6 +30,7 @@ fields:
       path: ''
     options:
     - computer science
+    - test
 - type: datetime
   name: date
   label: date
