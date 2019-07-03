@@ -3,11 +3,10 @@ label: computer science
 hide_body: false
 fields:
 - type: text
-  name: layout
-  label: layout
-- type: text
   name: title
   label: title
+  config:
+    required: false
 - type: list
   name: tags
   label: tags
@@ -34,3 +33,5 @@ fields:
 - type: datetime
   name: date
   label: date
+  hidden: true
+  default: now
