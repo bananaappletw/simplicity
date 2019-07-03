@@ -17,7 +17,10 @@ fields:
   config:
     use_select: true
     source:
-      type: simple
+      type: pages
+      section: posts
+      file: _posts/2016-03-22-review.md
+      path: categories
 - type: datetime
   name: date
   label: date
