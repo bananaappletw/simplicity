@@ -21,6 +21,8 @@ fields:
       section: posts
       file: 
       path: ''
+    options:
+    - computer science
 - type: datetime
   name: date
   label: date
