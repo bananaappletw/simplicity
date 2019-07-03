@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "I don't know c language"
 tags:
   - c

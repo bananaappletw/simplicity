@@ -1,12 +1,17 @@
 # Blog config
+
 url: bananaappletw.github.io
 date_format: "%b %-d, %Y"
-
-# jekyll serve
-
 host: 0.0.0.0
 
-# Build settings
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
 
 plugins:
   - jekyll-assets

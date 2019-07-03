@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: how python pass argument in function
 tags:
   - python

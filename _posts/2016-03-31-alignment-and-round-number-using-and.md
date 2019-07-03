@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: 'alignment and round number using & and ~'
 tags:
   - linux kernel

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: db/seeds for carrierwave
 author: bananaapple
 tags:

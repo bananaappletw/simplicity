@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Rails best practices
 author: bananaapple
 tags:

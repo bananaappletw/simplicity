@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: My favorite script
 tags:
   - script

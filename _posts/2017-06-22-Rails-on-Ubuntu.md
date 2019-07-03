@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Rails on Ubuntu
 author: bananaapple
 tags:

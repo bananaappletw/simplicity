@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Preview file using send_file
 author: bananaapple
 tags:

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Javascript function paramter default  value
 author: bananaapple
 tags:

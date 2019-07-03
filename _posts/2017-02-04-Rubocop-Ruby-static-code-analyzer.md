@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Rubocop - Ruby static code analyzer
 author: bananaapple
 tags:

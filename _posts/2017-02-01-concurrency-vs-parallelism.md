@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Concurrency vs parallelism
 author: bananaapple
 tags:

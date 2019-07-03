@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: symbolic exection introduction
 tags: []
 categories: []

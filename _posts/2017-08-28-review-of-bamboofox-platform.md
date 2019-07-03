@@ -1,6 +1,6 @@
 ---
 title: Review of bamboofox platform
-layout: post
+
 categories:
 - computer science
 tags:
