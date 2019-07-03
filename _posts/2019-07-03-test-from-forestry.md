@@ -7,4 +7,4 @@ categories:
 - computer science
 
 ---
-test
+![](/uploads/1708w-getty-fruit-closeup-CarstenSchanter-EyeEm.jpg)test
