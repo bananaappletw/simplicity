@@ -11,6 +11,14 @@ fields:
 - type: list
   name: tags
   label: tags
+  config:
+    use_select: true
+    source:
+      type: simple
+    options:
+    - ruby
+    - c++
+    - javascript
 - type: list
   name: categories
   label: categories
