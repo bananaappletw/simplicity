@@ -36,3 +36,5 @@ fields:
   label: date
   hidden: true
   default: now
+pages:
+- _posts/test-from-forestry.md
