@@ -51,4 +51,41 @@ i18n 的部份 url 會是這樣
 
 \`/zh-TW/index.html\`
 
-像是
+事實上目前的 plugin 都沒有辦法滿足這需求
+
+所以只能自己寫
+
+[https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/ "https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/")
+
+\`_plugin_/i18n_tag.rb_\` 
+
+    module Jekyll
+      class I18nTag < Liquid::Tag
+        def initialize(tag_name, text, tokens)
+          super
+          @text = text.strip
+        end
+    
+        def render(context)
+          site = context.registers[:site]
+          page = context.registers[:page]
+          path = @text.split('.')
+          if site.data[page['lang']][page['i18n_prefix']]&.dig(*path)
+            site.data[page['lang']][page['i18n_prefix']].dig(*path)
+          else
+            site.data[page['lang']].dig(*path)
+          end
+        end
+      end
+    end
+    
+    Liquid::Template.register_tag('t', Jekyll::I18nTag)
+
+在 front matter 裡面設定 `i18n_prefix: index`
+
+這樣就可以在 i18n 不同的分頁面寫同樣的 key 也不怕會撞 key 
+
+`_data/en.yml`
+
+    index: 
+    	title: Index Page
