@@ -37,4 +37,5 @@ fields:
   hidden: true
   default: now
 pages:
+- _posts/mysql-document.md
 - _posts/2019-07-03-test-from-forestry.md
