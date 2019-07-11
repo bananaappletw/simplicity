@@ -16,6 +16,8 @@ categories:
 
 session2 用 select for share 去讀資料必須等到 session1 commit 後才能讀取
 
+通常用在 [https://en.wikipedia.org/wiki/Relational_model](https://en.wikipedia.org/wiki/Relational_model "https://en.wikipedia.org/wiki/Relational_model")
+
 ## `[SELECT ... FOR UPDATE](https://dev.mysql.com/doc/refman/8.0/en/select.html "13.2.10 SELECT Syntax")`
 
 # Reference
