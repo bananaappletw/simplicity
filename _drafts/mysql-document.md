@@ -18,8 +18,10 @@ session2 用 select for share 去讀資料必須等到 session1 commit 後才能
 
 通常用在 [https://en.wikipedia.org/wiki/Relational_model](https://en.wikipedia.org/wiki/Relational_model "https://en.wikipedia.org/wiki/Relational_model") 上
 
-1. SELECT parent table FOR SHARE 
+1. SELECT parent table FOR SHARE
 2. 依賴上一條指令的成功與否(存在與否)決定執行結果
+
+修改時必須等所有 share lock 都釋放才能修改
 
 當你需要新增 child 資料時，parent 有可能已經被刪除了
 
@@ -47,7 +49,7 @@ session1 3.
 
 session2 3.
 
-最後資料就會產生 
+最後資料就會產生
 
 # Reference
 
