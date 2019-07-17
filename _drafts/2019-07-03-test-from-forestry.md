@@ -10,6 +10,12 @@ categories:
 
 然後提供非技術人員能夠寫稿然後發布
 
+這種東西比較精確的名詞是 Static Site Generators
+
+可以參考 [https://www.staticgen.com/](https://www.staticgen.com/ "https://www.staticgen.com/") 看看每個框架的 star, issue, fork 數量
+
+看看這些數值的變動來決定使用什麼框架
+
 # i18n
 
 主要是參考這篇文章 [https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/ "https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/")
