@@ -12,74 +12,74 @@ categories:
 
 # CSS Naming
 
-# [BEM](http://getbem.com/naming/)
+## [BEM](http://getbem.com/naming/)
 
 > There are only two hard problems in Computer Science: cache invalidation and naming things — _Phil Karlton_
 
-## Block
+### Block
 
-### HTML
+#### HTML
 
     <div class="block">
           ...
           <span class="block__elem"></span>
      </div>
 
-### CSS
+#### CSS
 
     .block { color: #042; }
 
-## Element
+### Element
 
-### HTML
+#### HTML
 
     <div class="block">
     	  ...
     	  <span class="block__elem"></span>
      </div>
 
-### CSS
+#### CSS
 
-#### Good
+##### Good
 
     .block__elem { color: #042; }
 
-#### Bad
+##### Bad
 
     .block .block__elem { color: #042; }
         div.block__elem { color: #042; }
 
-## Modifier
+### Modifier
 
-### HTML
+#### HTML
 
-#### Good
+##### Good
 
     <div class="block block--mod">...</div>
         <div class="block block--size-big
             block--shadow-yes">...</div>
 
-#### Bad
+##### Bad
 
     <div class="block--mod">...</div>
 
-### CSS
+#### CSS
 
-#### Use modifier class name as selector:
+##### Use modifier class name as selector:
 
     .block--hidden { }
 
-#### To alter elements based on a block-level modifier:
+##### To alter elements based on a block-level modifier:
 
     .block--mod .block__elem { }
 
-#### Element modifier:
+##### Element modifier:
 
     .block__elem--mod { }
 
-## Example
+### Example
 
-### HTML
+#### HTML
 
     <form class="form form--theme-xmas form--simple">
       <input class="form__input" type="text" />
@@ -88,7 +88,7 @@ categories:
         type="submit" />
     </form>
 
-### CSS
+#### CSS
 
     .form { }
     .form--theme-xmas { }
