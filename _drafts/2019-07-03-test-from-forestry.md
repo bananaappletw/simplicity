@@ -13,6 +13,12 @@ categories:
 # i18n
 
 主要是參考這篇文章 [https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/ "https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/")
+
+`_data/en.yml`
+
+    index:
+    	title: hello
+
 # CSS Naming
 
 ## [OOCSS(Object Oriented CSS)](https://www.keycdn.com/blog/oocss "OOCSS")
