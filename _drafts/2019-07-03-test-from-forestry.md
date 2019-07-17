@@ -18,9 +18,15 @@ categories:
 
     <button class="btn btn-small btn-primary"></button>
 
-### Example
+## [SMACSS](http://smacss.com/)
 
-* [Bootstrap](https://getbootstrap.com/)
+### HTML
+
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+    </ul>
 
 ## [BEM](http://getbem.com/naming/)
 
