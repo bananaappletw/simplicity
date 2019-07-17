@@ -22,7 +22,7 @@ categories:
           ...
           <span class="block__elem"></span>
      </div>
-     
+
 ### CSS
 
     .block { color: #042; }
@@ -35,17 +35,17 @@ categories:
     	  ...
     	  <span class="block__elem"></span>
      </div>
-     
+
 ### CSS
 
 #### Good
 
-	.block__elem { color: #042; }
-    
+    .block__elem { color: #042; }
+
 #### Bad
+
     .block .block__elem { color: #042; }
         div.block__elem { color: #042; }
-
 
 ## Modifier
 
@@ -59,18 +59,38 @@ categories:
 
 #### Bad
 
-  	<div class="block--mod">...</div>
+    <div class="block--mod">...</div>
 
 ### CSS
 
 #### Use modifier class name as selector:
 
-	.block--hidden { }
-    
+    .block--hidden { }
+
 #### To alter elements based on a block-level modifier:
 
     .block--mod .block__elem { }
-    
+
 #### Element modifier:
 
-	.block__elem--mod { }
+    .block__elem--mod { }
+
+## Example
+
+### HTML
+
+    <form class="form form--theme-xmas form--simple">
+      <input class="form__input" type="text" />
+      <input
+        class="form__submit form__submit--disabled"
+        type="submit" />
+    </form>
+
+### CSS
+
+    .form { }
+    .form--theme-xmas { }
+    .form--simple { }
+    .form__input { }
+    .form__submit { }
+    .form__submit--disabled { }
