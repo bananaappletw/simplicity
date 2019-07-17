@@ -194,6 +194,26 @@ categories:
       }
     }
 
+### 手好癢好想寫 nested element
+
+可以先看完這篇 [https://en.bem.info/methodology/quick-start/#nesting-1](https://en.bem.info/methodology/quick-start/#nesting-1 "https://en.bem.info/methodology/quick-start/#nesting-1")
+
+要遵守三點:
+
+* Elements can be nested inside each other.
+* You can have any number of nesting levels.
+* An element is always part of a block, not another element. This means that element names can't define a hierarchy such as `block__elem1__elem2`.
+
+#### Example
+
+    <form class="search-form">
+        <div class="search-form__content">
+            <input class="search-form__input">
+    
+            <button class="search-form__button">Search</button>
+        </div>
+    </form>
+
 # References
 
 * [https://cythilya.github.io/2018/06/05/css-methodologies/](https://cythilya.github.io/2018/06/05/css-methodologies/ "https://cythilya.github.io/2018/06/05/css-methodologies/")
