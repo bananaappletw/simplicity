@@ -13,13 +13,6 @@ categories:
 # i18n
 
 主要是參考這篇文章 [https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/ "https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/")
-
-# [FORESTRAY](https://forestry.io/)
-
-剛好看到這個平台
-
-才發現其實和當初看 i18n plugin 怎麼做的文章的作者就是這個平台
-
 # CSS Naming
 
 ## [OOCSS(Object Oriented CSS)](https://www.keycdn.com/blog/oocss "OOCSS")
