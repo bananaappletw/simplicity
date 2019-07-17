@@ -6,9 +6,6 @@ categories:
 - computer science
 
 ---
-[http://smacss.com/](http://smacss.com/ "http://smacss.com/")
-
-[http://stylecoder.tw/ni-yi-wei-de-csszui-jia-xie-fa-shi-cuo-de-/](http://stylecoder.tw/ni-yi-wei-de-csszui-jia-xie-fa-shi-cuo-de-/ "http://stylecoder.tw/ni-yi-wei-de-csszui-jia-xie-fa-shi-cuo-de-/")
 
 # CSS Naming
 
