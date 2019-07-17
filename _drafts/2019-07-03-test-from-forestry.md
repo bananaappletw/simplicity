@@ -14,10 +14,30 @@ categories:
 
 主要是參考這篇文章 [https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/ "https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/")
 
+
+`index.html`
+
+	---
+    	i18n_prefix: index
+        lang: en
+	---
+    {% t title %}
+    	title: hello
+        
 `_data/en.yml`
 
     index:
     	title: hello
+        
+`_data/zh.yml`
+
+    index:
+    	title: hello
+        
+`_plugin/i18n_plugin`
+
+	Jekyll::
+    
 
 # CSS Naming
 
