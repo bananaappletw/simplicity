@@ -94,3 +94,7 @@ categories:
     .form__input { }
     .form__submit { }
     .form__submit--disabled { }
+
+# References
+
+* [https://cythilya.github.io/2018/06/05/css-methodologies/](https://cythilya.github.io/2018/06/05/css-methodologies/ "https://cythilya.github.io/2018/06/05/css-methodologies/")
