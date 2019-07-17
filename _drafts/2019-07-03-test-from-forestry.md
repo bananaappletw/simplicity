@@ -6,6 +6,15 @@ categories:
 - computer science
 
 ---
+這次官網的目的是要做出一個靜態的網站
+
+然後提供非技術人員能夠寫稿然後發布
+
+# [FORESTRAY](https://forestry.io/)
+
+剛好看到這個平台
+
+才發現其實和當初看 i18n plugin 怎麼做的文章的作者就是這個平台
 
 # CSS Naming
 
