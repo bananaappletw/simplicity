@@ -159,7 +159,43 @@ categories:
     .form__submit { }
     .form__submit--disabled { }
 
+### Youtube
+
+詳細可以參考這篇文章 [https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252](https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252 "https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252")
+
+![](/uploads/1_Qnp9OzN6VV7e2IY32wsBbQ.png)
+
+#### HTML
+
+    <header class="youtube-header">
+      <img class="youtube-header__logo"/>
+      <div class="youtube-header__search"></div>
+      <ul class="youtube-header__list">
+        <li class="youtube-header__item></li>
+        <li class="youtube-header__item></li>
+     </ul>
+    </header>
+
+#### SASS
+
+    .youtube-header {
+      // rules
+      &__logo {
+        // rules
+      }
+      &__search {
+        // rules
+      }
+      &__list {
+        // rules
+      }
+      &__item {
+        // rules
+      }
+    }
+
 # References
 
 * [https://cythilya.github.io/2018/06/05/css-methodologies/](https://cythilya.github.io/2018/06/05/css-methodologies/ "https://cythilya.github.io/2018/06/05/css-methodologies/")
 * [https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252](https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252 "https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252")
+* [https://css-tricks.com/lets-define-exactly-atomic-css/](https://css-tricks.com/lets-define-exactly-atomic-css/ "https://css-tricks.com/lets-define-exactly-atomic-css/")
