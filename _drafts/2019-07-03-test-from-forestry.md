@@ -18,11 +18,23 @@ categories:
 `index.html`
 
 	---
+    	permalink: /
     	i18n_prefix: index
         lang: en
 	---
     {% t title %}
     	title: hello
+        
+`zh/index.html`
+
+	---
+    	permalink: /zh
+    	i18n_prefix: index
+        lang: en
+	---
+    {% t title %}
+    	title: hello
+
         
 `_data/en.yml`
 
