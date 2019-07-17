@@ -10,6 +10,10 @@ categories:
 
 然後提供非技術人員能夠寫稿然後發布
 
+# i18n
+
+主要是參考這篇文章 [https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/ "https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/")
+
 # [FORESTRAY](https://forestry.io/)
 
 剛好看到這個平台
