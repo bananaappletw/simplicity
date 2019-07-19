@@ -84,9 +84,29 @@ categories:
     index:
     	title: hello
 
-`_plugins/i18n_pn`
+`_plugins/i18n_tag`
 
-    Jekyll::/home/bananaappletwvv/official-website/_plugins/i18n_tag.rb
+    module Jekyll
+      class I18nTag < Liquid::Tag
+        def initialize(tag_name, text, tokens)
+          super
+          @text = text.strip
+        end
+    
+        def render(context)
+          site = context.registers[:site]
+          page = context.registers[:page]
+          path = @text.split('.')
+          if site.data[page['locale']][page['i18n_prefix']]&.dig(*path)
+            site.data[page['locale']][page['i18n_prefix']].dig(*path)
+          else
+            site.data[page['locale']].dig(*path)
+          end
+        end
+      end
+    end
+    
+    Liquid::Template.register_tag('t', Jekyll::I18nTag)
 
 # CSS Naming
 
