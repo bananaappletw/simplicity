@@ -128,7 +128,7 @@ categories:
         locale: en
     ---
 
-# CSS 小技巧
+# CSS 小技巧或是
 
 ## image wrapper
 
@@ -151,7 +151,90 @@ categories:
         }
     }
 
-## 
+## Aspect Ratio Boxes
+
+可以參考這篇文章 [https://css-tricks.com/aspect-ratio-boxes/](https://css-tricks.com/aspect-ratio-boxes/ "https://css-tricks.com/aspect-ratio-boxes/")
+
+比如說想要比例是 4:3 (寬 vs 高)
+
+寬度佔滿 100% 垂直至中對齊多餘的隱藏起來
+
+### HTML
+
+    <div class="ratio-box">
+    	<img src="...">
+    </div>
+
+### CSS
+
+    .ratio-box{
+        overflow: hidden;
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          padding-top: 75%;
+        }
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+        }
+    }
+
+## Nested links
+
+[https://css-tricks.com/nested-links/](https://css-tricks.com/nested-links/ "https://css-tricks.com/nested-links/")
+
+### HTML
+
+    <a href="..."> 
+      <a href="..."> 
+    	...
+      </a>
+    </a>
+
+這樣其實就會有非預期的現象發生應該避免
+
+## Stop box-sizing everything
+
+[https://aastudio.fr/box-sizing.html](https://aastudio.fr/box-sizing.html "https://aastudio.fr/box-sizing.html")
+
+一開始在寫的時候發現有 `box-sizing` 這東西好方便喔
+
+你設寬度是多少就是多少
+
+就直接把全部東西都這樣寫了
+
+### HTML
+
+      html { box-sizing: border-box; }
+
+後來會發現有些東西根本不需要或是能用 padding + border 算就可以了
+
+就全部改回來了
+
+## Mobile first
+
+一開始在刻的時候先刻 desktop 版再刻 mobile 版
+
+事實上應該反過來
+
+這個我刻到一半的時候發覺這件事後就改過來了
+
+## Don't affect positioning of other elements on border-width changes
+
+你可能會想要有 hover 的時候
+
+元素下面加一下底線
+
+但是你加了 border 元素的大小就改變了
+
+就會產生移位
+
+1. 使用 box-shadow
+2. 你可以先把 border 加上去但是 transparent 等到 hover 的時候再改變顏色顯示出來
 
 # CSS Naming
 
