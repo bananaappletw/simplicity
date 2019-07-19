@@ -18,6 +18,11 @@ categories:
 
 看看這些數值的變動來決定使用什麼框架
 
+當不知道要選什麼框架的時候可以從一些方向下手
+
+* 程式語言
+* 使用人數多寡,使用人數比較多的話也會比較多人遇到相同問題,這樣有解的機率也會比較高
+
 主要需求:
 
 * i18n
@@ -61,7 +66,7 @@ categories:
     ---
     
     {% t title %}
-    	title: hello
+    // hello
 
 `zh/index.html`
 
@@ -72,7 +77,7 @@ categories:
     ---
     
     {% t title %}
-    	title: hello
+    // 你好
 
 `_data/en.yml`
 
@@ -82,7 +87,7 @@ categories:
 `_data/zh.yml`
 
     index:
-    	title: hello
+    	title: 你好
 
 `_plugins/i18n_tag`
 
@@ -107,6 +112,21 @@ categories:
     end
     
     Liquid::Template.register_tag('t', Jekyll::I18nTag)
+
+# Pagination
+
+使用這個套件 [https://github.com/sverrirs/jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2 "https://github.com/sverrirs/jekyll-paginate-v2")
+
+`index.html`
+
+    ---
+    layout: index
+    permalink: /
+    pagination:
+        per_page: 5
+        enabled: true
+        locale: en
+    ---
 
 # CSS Naming
 
