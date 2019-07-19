@@ -59,14 +59,17 @@ categories:
 
 `index.html`
 
+{% raw %}
+
     ---
-    	permalink: /
-    	i18n_prefix: index
+        permalink: /
+        i18n_prefix: index
         lang: en
-    ---
-    
+    ---    
+
     {% t title %}
     // hello
+{\% endraw \%}
 
 `zh/index.html`
 
