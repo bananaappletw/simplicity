@@ -69,7 +69,7 @@ categories:
 
     {% t title %}
     // hello
-{\% endraw \%}
+{% endraw %}
 
 `zh/index.html`
 
@@ -82,7 +82,7 @@ categories:
     
     {% t title %}
     // 你好
-{\% endraw \%}
+{% endraw %}
 
 `_data/en.yml`
 
