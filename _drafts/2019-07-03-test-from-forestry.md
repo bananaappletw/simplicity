@@ -128,6 +128,31 @@ categories:
         locale: en
     ---
 
+# CSS 小技巧
+
+## image wrapper
+
+我自己是比較喜歡在外面再加一層 wrapper 然後用外框來控制寬度和高度
+
+寬度 300px 然後高度保持比例放大
+
+### HTML
+
+    <div class="logo">
+    	<img src="...">
+    </div>
+
+### CSS
+
+    .logo{
+    	width: 300px;
+    	img{
+        	width: 100%;
+        }
+    }
+
+## 
+
 # CSS Naming
 
 ## [OOCSS(Object Oriented CSS)](https://www.keycdn.com/blog/oocss "OOCSS")
