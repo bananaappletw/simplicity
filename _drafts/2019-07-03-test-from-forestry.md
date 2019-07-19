@@ -18,6 +18,36 @@ categories:
 
 看看這些數值的變動來決定使用什麼框架
 
+主要需求:
+
+* i18n
+
+`/zh/index.html`
+
+顯示中文的頁面
+
+`/en/index.html`
+
+顯示英文的頁面
+
+* 不同頁面呈現不同 category 的文章
+
+像是 `/blog`
+
+會顯示出 front matter 的 category 是 blog 的文章
+
+* 能夠照 i18n 顯示對應語系的文章
+
+像是 `/zh/blog`
+
+顯示出 front matter 的 category 是 blog 而且 locale 是 zh 的文章
+
+* 各自 category 的文章照 tag 分類顯示
+
+像是 `/blog/life`
+
+會顯示出 front matter 的 category 是 blog 的文章而且 tag 是 life 的文章
+
 # i18n
 
 主要是參考這篇文章 [https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/ "https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/")
