@@ -84,9 +84,9 @@ categories:
     index:
     	title: hello
 
-`_plugin/i18n_plugin`
+`_plugins/i18n_pn`
 
-    Jekyll::
+    Jekyll::/home/bananaappletwvv/official-website/_plugins/i18n_tag.rb
 
 # CSS Naming
 
