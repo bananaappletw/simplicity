@@ -73,6 +73,7 @@ categories:
 
 `zh/index.html`
 
+{% raw %}
     ---
     	permalink: /zh
     	i18n_prefix: index
@@ -81,6 +82,7 @@ categories:
     
     {% t title %}
     // 你好
+{\% endraw \%}
 
 `_data/en.yml`
 
