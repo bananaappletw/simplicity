@@ -270,17 +270,21 @@ categories:
 
 ### HTML
 
+
     <button class="btn btn-small btn-primary"></button>
+
 
 ## [SMACSS](http://smacss.com/)
 
 ### HTML
+
 
     <ul class="nav">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
       </li>
     </ul>
+
 
 ## [BEM](http://getbem.com/naming/)
 
@@ -292,36 +296,48 @@ categories:
 
 #### HTML
 
+
     <div class="block">
           ...
           <span class="block__elem"></span>
      </div>
 
+
 #### CSS
+
 
     .block { color: #042; }
 
+
 ### Element
+
 
 `block-name__element-name`
 
+
 #### HTML
+
 
     <div class="block">
     	  ...
     	  <span class="block__elem"></span>
      </div>
 
+
 #### CSS
 
 ##### Good
 
+
     .block__elem { color: #042; }
+
 
 ##### Bad
 
+
     .block .block__elem { color: #042; }
         div.block__elem { color: #042; }
+
 
 ### Modifier
 
@@ -341,19 +357,25 @@ categories:
 
 ##### Good
 
+
     <div class="block block_mod">...</div>
         <div class="block block_size-big
             block_shadow_yes">...</div>
 
+
 ##### Bad
 
+
     <div class="block_mod">...</div>
+
 
 #### CSS
 
 ##### Use modifier class name as selector:
 
+
     .block_hidden { }
+
 
 ##### To alter elements based on a block-level modifier:
 
