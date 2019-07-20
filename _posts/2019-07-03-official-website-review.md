@@ -66,22 +66,24 @@ categories:
         i18n_prefix: index
         lang: en
     ---    
-
+    
     {% t title %}
     // hello
+
 {% endraw %}
 
 `zh/index.html`
 
 {% raw %}
-    ---
-    	permalink: /zh
-    	i18n_prefix: index
-        lang: en
-    ---
-    
+\---
+permalink: /zh
+i18n_prefix: index
+lang: en
+\---
+
     {% t title %}
     // 你好
+
 {% endraw %}
 
 `_data/en.yml`
@@ -265,6 +267,8 @@ categories:
 
 ### Block
 
+`block-name`
+
 #### HTML
 
     <div class="block">
@@ -277,6 +281,8 @@ categories:
     .block { color: #042; }
 
 ### Element
+
+`block-name__element-name`
 
 #### HTML
 
@@ -297,6 +303,8 @@ categories:
         div.block__elem { color: #042; }
 
 ### Modifier
+
+`block-name__element-name--modifier-name-modifier_value`
 
 #### HTML
 
@@ -391,11 +399,31 @@ categories:
 
 #### Example
 
+可能會遇到一種情況有 block 和 elem1 和 elem2
+
+elem1 和 elem2 相對於 block
+
+那就可以寫成 `block__elem1` 和 \`block__elem2
+
+但是 elem2 是相對於 elem1 的
+
     <form class="search-form">
         <div class="search-form__content">
             <input class="search-form__input">
     
             <button class="search-form__button">Search</button>
+        </div>
+    </form>
+
+或是將 elem1 加上 elem2 當成組合字當成一個新的 element `elem1-elem2` 
+
+ `block__elem1-elem2`
+
+    <form class="search-form">
+        <div class="search-form__content">
+            <input class="search-form__content-input">
+    
+            <button class="search-form__content-button">Search</button>
         </div>
     </form>
 
