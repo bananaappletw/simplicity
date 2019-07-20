@@ -308,9 +308,9 @@ lang: en
 
 有兩種寫法
 
-`block-name__element-name_modifier-name_modifier_value`
-
 `block-name__element-name--modifier-name-modifier_value`
+
+`block-name__element-name_modifier-name_modifier_value`
 
 我自己是比較喜歡後者
 
@@ -320,47 +320,47 @@ lang: en
 
 ##### Good
 
-    <div class="block block--mod">...</div>
-        <div class="block block--size-big
-            block--shadow-yes">...</div>
+    <div class="block block_mod">...</div>
+        <div class="block block_size-big
+            block_shadow_yes">...</div>
 
 ##### Bad
 
-    <div class="block--mod">...</div>
+    <div class="block_mod">...</div>
 
 #### CSS
 
 ##### Use modifier class name as selector:
 
-    .block--hidden { }
+    .block_hidden { }
 
 ##### To alter elements based on a block-level modifier:
 
-    .block--mod .block__elem { }
+    .block_mod .block__elem { }
 
 ##### Element modifier:
 
-    .block__elem--mod { }
+    .block__elem_mod { }
 
 ### Example
 
 #### HTML
 
-    <form class="form form--theme-xmas form--simple">
+    <form class="form form_theme_xmas form_simple">
       <input class="form__input" type="text" />
       <input
-        class="form__submit form__submit--disabled"
+        class="form__submit form__submit_disabled"
         type="submit" />
     </form>
 
 #### CSS
 
     .form { }
-    .form--theme-xmas { }
-    .form--simple { }
+    .form_theme_xmas { }
+    .form_simple { }
     .form__input { }
     .form__submit { }
-    .form__submit--disabled { }
+    .form__submit_disabled { }
 
 ### Youtube
 
@@ -445,7 +445,56 @@ elem1 和 elem2 相對於 block
         </div>
     </form>
 
-### 
+### Don't use nested selectors
+
+只有你要改變 element 的 style based on block 的 modifier
+
+	.button_hovered .button__text
+    {
+      text-decoration: underline;
+    }
+    .button_theme_islands .button__text
+    {
+      line-height: 1.5;
+    }
+    
+### Don't use combined selectors
+
+#### HTML
+
+	<button class="button button_theme_islands button_active">...</button>
+
+#### Bad CSS
+
+    .button.button_theme_islands {}
+    .button.button_active {}
+    
+你必須將兩個 modifier 拉到同樣 .button 的 level 才能有相同的 CSS 權重
+
+#### Good CSS
+
+	.button_theme_islands {}
+    .button_active {}
+    .button {}
+
+#### Exception
+
+比如你有可能需要用 markdown 生成 html tag
+
+在 .content class 的 block 套用你自己寫的 style
+
+	<div class="content">
+      ... <!-- the user’s text -->
+    </div>
+    CSS rules:
+    .content a {
+      ...
+    }
+    .content p {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
 
 # References
 
