@@ -25,12 +25,12 @@ fields:
     use_select: true
     source:
       type: simple
-      section: posts
+      section: jekyll-posts
       file: 
       path: ''
     options:
     - computer science
-    - test
+    - life
 - type: datetime
   name: date
   label: date
