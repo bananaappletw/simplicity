@@ -75,11 +75,12 @@ categories:
 `zh/index.html`
 
 {% raw %}
-\---
-permalink: /zh
-i18n_prefix: index
-lang: en
-\---
+
+	---
+    permalink: /zh
+    i18n_prefix: index
+    lang: en
+    ---
 
     {% t title %}
     // 你好
@@ -88,15 +89,20 @@ lang: en
 
 `_data/en.yml`
 
+
     index:
     	title: hello
 
+
 `_data/zh.yml`
+
 
     index:
     	title: 你好
 
+
 `_plugins/i18n_tag`
+
 
     module Jekyll
       class I18nTag < Liquid::Tag
@@ -119,6 +125,7 @@ lang: en
     end
     
     Liquid::Template.register_tag('t', Jekyll::I18nTag)
+
 
 # Pagination
 
@@ -216,9 +223,7 @@ lang: en
 
 ### HTML
 
-
       html { box-sizing: border-box; }
-
 
 後來會發現有些東西根本不需要或是能用 padding + border 算就可以了
 
@@ -251,21 +256,17 @@ lang: en
 
 ### HTML
 
-
     <button class="btn btn-small btn-primary"></button>
-
 
 ## [SMACSS](http://smacss.com/)
 
 ### HTML
-
 
     <ul class="nav">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
       </li>
     </ul>
-
 
 ## [BEM](http://getbem.com/naming/)
 
@@ -277,12 +278,10 @@ lang: en
 
 #### HTML
 
-
     <div class="block">
           ...
           <span class="block__elem"></span>
      </div>
-
 
 #### CSS
 
@@ -294,27 +293,21 @@ lang: en
 
 #### HTML
 
-
     <div class="block">
     	  ...
     	  <span class="block__elem"></span>
      </div>
 
-
 #### CSS
 
 ##### Good
 
-
     .block__elem { color: #042; }
-
 
 ##### Bad
 
-
     .block .block__elem { color: #042; }
         div.block__elem { color: #042; }
-
 
 ### Modifier
 
@@ -334,42 +327,31 @@ lang: en
 
 ##### Good
 
-
     <div class="block block_mod">...</div>
         <div class="block block_size-big
             block_shadow_yes">...</div>
 
-
 ##### Bad
 
-
     <div class="block_mod">...</div>
-
 
 #### CSS
 
 ##### Use modifier class name as selector:
 
-
     .block_hidden { }
-
 
 ##### To alter elements based on a block-level modifier:
 
-
     .block_mod .block__elem { }
-
 
 ##### Element modifier:
 
-
     .block__elem_mod { }
-
 
 ### Example
 
 #### HTML
-
 
     <form class="form form_theme_xmas form_simple">
       <input class="form__input" type="text" />
@@ -378,9 +360,7 @@ lang: en
         type="submit" />
     </form>
 
-
 #### CSS
-
 
     .form { }
     .form_theme_xmas { }
@@ -389,7 +369,6 @@ lang: en
     .form__submit { }
     .form__submit_disabled { }
 
-
 ### Youtube
 
 詳細可以參考這篇文章 [https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252](https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252 "https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252")
@@ -397,7 +376,6 @@ lang: en
 ![](/uploads/1_Qnp9OzN6VV7e2IY32wsBbQ.png)
 
 #### HTML
-
 
     <header class="youtube-header">
       <img class="youtube-header__logo"/>
@@ -408,9 +386,7 @@ lang: en
      </ul>
     </header>
 
-
 #### SASS
-
 
     .youtube-header {
       // rules
@@ -427,7 +403,6 @@ lang: en
         // rules
       }
     }
-
 
 ### 手好癢好想寫 nested element
 
@@ -457,7 +432,6 @@ elem1 和 elem2 相對於 block
 
 那你就無法讓 elem2 在沒有 elem1 的情況下獨立存在
 
-
     <form class="search-form">
         <div class="search-form__content">
             <input class="search-form__input">
@@ -466,11 +440,9 @@ elem1 和 elem2 相對於 block
         </div>
     </form>
 
-
 或是將 elem1 加上 elem2 當成組合字當成一個新的 element `elem1-elem2`
 
 `block__elem1-elem2`
-
 
     <form class="search-form">
         <div class="search-form__content">
@@ -480,13 +452,11 @@ elem1 和 elem2 相對於 block
         </div>
     </form>
 
-
 ### Don't use nested selectors
 
 只有你要改變 element 的 style based on block 的 modifier
 
-
-	.button_hovered .button__text
+    .button_hovered .button__text
     {
       text-decoration: underline;
     }
@@ -494,32 +464,25 @@ elem1 和 elem2 相對於 block
     {
       line-height: 1.5;
     }
-    
 
 ### Don't use combined selectors
 
 #### HTML
 
-
-	<button class="button button_theme_islands button_active">...</button>
-
+    <button class="button button_theme_islands button_active">...</button>
 
 #### Bad CSS
 
-
     .button.button_theme_islands {}
     .button.button_active {}
-    
 
 你必須將兩個 modifier 拉到同樣 .button 的 level 才能有相同的 CSS 權重
 
 #### Good CSS
 
-
-	.button_theme_islands {}
+    .button_theme_islands {}
     .button_active {}
     .button {}
-
 
 #### Exception
 
@@ -527,8 +490,7 @@ elem1 和 elem2 相對於 block
 
 在 .content class 的 block 套用你自己寫的 style
 
-
-	<div class="content">
+    <div class="content">
       ... <!-- the user’s text -->
     </div>
     CSS rules:
@@ -539,8 +501,6 @@ elem1 和 elem2 相對於 block
       font-family: Arial, sans-serif;
       text-align: center;
     }
-
-
 
 # References
 
