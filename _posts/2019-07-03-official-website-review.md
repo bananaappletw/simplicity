@@ -419,7 +419,7 @@ elem1 和 elem2 相對於 block
 
 可以忽視 elem2 對於 elem1 的關係
 
-畢竟他們都是相對於 block 
+畢竟他們都是相對於 block
 
 要是你將 elem2 nested 在 elem1 裡
 
@@ -433,9 +433,9 @@ elem1 和 elem2 相對於 block
         </div>
     </form>
 
-或是將 elem1 加上 elem2 當成組合字當成一個新的 element `elem1-elem2` 
+或是將 elem1 加上 elem2 當成組合字當成一個新的 element `elem1-elem2`
 
- `block__elem1-elem2`
+`block__elem1-elem2`
 
     <form class="search-form">
         <div class="search-form__content">
@@ -445,7 +445,7 @@ elem1 和 elem2 相對於 block
         </div>
     </form>
 
-
+### 
 
 # References
 
@@ -453,3 +453,4 @@ elem1 和 elem2 相對於 block
 * [https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252](https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252 "https://codeburst.io/understanding-css-bem-naming-convention-a8cca116d252")
 * [https://css-tricks.com/lets-define-exactly-atomic-css/](https://css-tricks.com/lets-define-exactly-atomic-css/ "https://css-tricks.com/lets-define-exactly-atomic-css/")
 * [https://en.bem.info/methodology/quick-start/#guidelines-for-using-elements](https://en.bem.info/methodology/quick-start/#guidelines-for-using-elements "https://en.bem.info/methodology/quick-start/#guidelines-for-using-elements")
+* [https://www.smashingmagazine.com/2018/06/bem-for-beginners/](https://www.smashingmagazine.com/2018/06/bem-for-beginners/ "https://www.smashingmagazine.com/2018/06/bem-for-beginners/")
