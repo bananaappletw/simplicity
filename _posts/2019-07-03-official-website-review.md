@@ -133,6 +133,7 @@ categories:
 
 `index.html`
 
+
     ---
     layout: index
     permalink: /
@@ -141,6 +142,7 @@ categories:
         enabled: true
         locale: en
     ---
+
 
 # CSS 小技巧或是
 
@@ -152,11 +154,14 @@ categories:
 
 ### HTML
 
+
     <div class="logo">
     	<img src="...">
     </div>
 
+
 ### CSS
+
 
     .logo{
     	width: 300px;
@@ -164,6 +169,7 @@ categories:
         	width: 100%;
         }
     }
+
 
 ## Aspect Ratio Boxes
 
@@ -175,11 +181,14 @@ categories:
 
 ### HTML
 
+
     <div class="ratio-box">
     	<img src="...">
     </div>
 
+
 ### CSS
+
 
     .ratio-box{
         overflow: hidden;
@@ -197,17 +206,20 @@ categories:
         }
     }
 
+
 ## Nested links
 
 [https://css-tricks.com/nested-links/](https://css-tricks.com/nested-links/ "https://css-tricks.com/nested-links/")
 
 ### HTML
 
+
     <a href="..."> 
       <a href="..."> 
     	...
       </a>
     </a>
+
 
 這樣其實就會有非預期的現象發生應該避免
 
@@ -223,7 +235,9 @@ categories:
 
 ### HTML
 
+
       html { box-sizing: border-box; }
+
 
 後來會發現有些東西根本不需要或是能用 padding + border 算就可以了
 
