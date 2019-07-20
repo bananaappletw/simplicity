@@ -304,7 +304,17 @@ lang: en
 
 ### Modifier
 
+其實 Modifier 的寫法比較有歧異
+
+有兩種寫法
+
+`block-name__element-name_modifier-name_modifier_value`
+
 `block-name__element-name--modifier-name-modifier_value`
+
+我自己是比較喜歡後者
+
+以下例子都用後者的寫法
 
 #### HTML
 
@@ -403,9 +413,17 @@ lang: en
 
 elem1 和 elem2 相對於 block
 
-那就可以寫成 `block__elem1` 和 \`block__elem2
+那就可以寫成 `block__elem1` 和 `block__elem2`
 
 但是 elem2 是相對於 elem1 的
+
+可以忽視 elem2 對於 elem1 的關係
+
+畢竟他們都是相對於 block 
+
+要是你將 elem2 nested 在 elem1 裡
+
+那你就無法讓 elem2 在沒有 elem1 的情況下獨立存在
 
     <form class="search-form">
         <div class="search-form__content">
@@ -426,6 +444,8 @@ elem1 和 elem2 相對於 block
             <button class="search-form__content-button">Search</button>
         </div>
     </form>
+
+
 
 # References
 
