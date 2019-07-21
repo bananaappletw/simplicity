@@ -488,6 +488,22 @@ elem1 和 elem2 相對於 block
       text-align: center;
     }
 
+# 對於簡單和複雜的元素的策略
+
+簡單的元素可以想辦法用 utilities class 來達成
+
+## HTML
+
+    <div class="once-block font-bold text-align-center">
+    </div>
+
+複雜的元素其實就比較適合自己寫成一個 class 並撰寫 style，不然你的 html 裡的 class 可能就會太多，很複雜不好維護
+
+## HTML
+
+    <div class="muzukashii-block">
+    </div>
+
 # 一些下次可以改進的點
 
 * 可能需要跟設計師協調設計稿的 breakpoint，會是希望可以套框架的 convension 可以善用 utilities class 用 class 就組出簡單的 style
