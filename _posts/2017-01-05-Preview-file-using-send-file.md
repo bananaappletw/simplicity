@@ -1,14 +1,13 @@
 ---
-
 title: Preview file using send_file
 author: bananaapple
 tags:
-  - ruby on rails
-  - send_file
-
+- ruby on rails
+- send_file
 categories:
-  - computer science
-date: 2017-01-05 16:15:00
+- computer science
+date: 2017-01-05T16:15:00.000+00:00
+
 ---
 在 Ruby on rails 裡面
 
@@ -27,17 +26,15 @@ date: 2017-01-05 16:15:00
 
 ## `app/controllers/challenges_controller.rb`
 
-```ruby
-def download
-  send_file file_path, disposition: 'inline'
-end
-```
+    def download
+      send_file file_path, disposition: 'inline'
+    end
 
 重點有兩個
+
 1. `:disposition` 參數用來指定是 `inline` 還是 `attachment`，default 是 `attachment`，所以要指定成 `inline`
 2. 設定 `:type`，設定 HTTP content type，瀏覽器知道要怎麼呈現這個檔案，就是所謂的 `preview`，通常這個參數可以不用設，它會自動從 `:filename` 裡抓取 file extension 並選擇適當的 MIME type 當作 HTTP content type
 
-#Reference
+\#Reference
 
-
-- [send_file](http://api.rubyonrails.org/classes/ActionController/DataStreaming.html#method-i-send_file)
+* [send_file](http://api.rubyonrails.org/classes/ActionController/DataStreaming.html#method-i-send_file)
