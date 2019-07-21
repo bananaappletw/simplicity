@@ -1,10 +1,11 @@
 ---
 title: official website review
-date: '2019-07-03 02:35:06 +0000'
+date: 2019-07-03 02:35:06 +0000
 categories:
 - computer science
----
+tags: []
 
+---
 # 釐清需求
 
 這次官網的目的是要做出一個靜態的網站
@@ -69,31 +70,26 @@ categories:
 
 `zh/index.html`
 
-	---
+    ---
     permalink: /zh
     i18n_prefix: index
     lang: en
     ---
-
+    
     {% t title %}
     // 你好
 
 `_data/en.yml`
 
-
     index:
     	title: hello
 
-
 `_data/zh.yml`
-
 
     index:
     	title: 你好
 
-
 `_plugins/i18n_tag`
-
 
     module Jekyll
       class I18nTag < Liquid::Tag
@@ -117,13 +113,11 @@ categories:
     
     Liquid::Template.register_tag('t', Jekyll::I18nTag)
 
-
 # Pagination
 
 使用這個套件 [https://github.com/sverrirs/jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2 "https://github.com/sverrirs/jekyll-paginate-v2")
 
 `index.html`
-
 
     ---
     layout: index
@@ -133,7 +127,6 @@ categories:
         enabled: true
         locale: en
     ---
-
 
 # CSS 小技巧或是
 
@@ -145,14 +138,11 @@ categories:
 
 ### HTML
 
-
     <div class="logo">
     	<img src="...">
     </div>
 
-
 ### CSS
-
 
     .logo{
     	width: 300px;
@@ -160,7 +150,6 @@ categories:
         	width: 100%;
         }
     }
-
 
 ## Aspect Ratio Boxes
 
@@ -172,14 +161,11 @@ categories:
 
 ### HTML
 
-
     <div class="ratio-box">
     	<img src="...">
     </div>
 
-
 ### CSS
-
 
     .ratio-box{
         overflow: hidden;
@@ -197,20 +183,17 @@ categories:
         }
     }
 
-
 ## Nested links
 
 [https://css-tricks.com/nested-links/](https://css-tricks.com/nested-links/ "https://css-tricks.com/nested-links/")
 
 ### HTML
 
-
     <a href="..."> 
       <a href="..."> 
     	...
       </a>
     </a>
-
 
 這樣其實就會有非預期的現象發生應該避免
 
@@ -226,9 +209,7 @@ categories:
 
 ### HTML
 
-
       html { box-sizing: border-box; }
-
 
 後來會發現有些東西根本不需要或是能用 padding + border 算就可以了
 
@@ -261,21 +242,17 @@ categories:
 
 ### HTML
 
-
     <button class="btn btn-small btn-primary"></button>
-
 
 ## [SMACSS](http://smacss.com/)
 
 ### HTML
-
 
     <ul class="nav">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
       </li>
     </ul>
-
 
 ## [BEM](http://getbem.com/naming/)
 
@@ -287,48 +264,36 @@ categories:
 
 #### HTML
 
-
     <div class="block">
           ...
           <span class="block__elem"></span>
      </div>
 
-
 #### CSS
-
 
     .block { color: #042; }
 
-
 ### Element
-
 
 `block-name__element-name`
 
-
 #### HTML
-
 
     <div class="block">
     	  ...
     	  <span class="block__elem"></span>
      </div>
 
-
 #### CSS
 
 ##### Good
 
-
     .block__elem { color: #042; }
-
 
 ##### Bad
 
-
     .block .block__elem { color: #042; }
         div.block__elem { color: #042; }
-
 
 ### Modifier
 
@@ -348,25 +313,19 @@ categories:
 
 ##### Good
 
-
     <div class="block block_mod">...</div>
         <div class="block block_size-big
             block_shadow_yes">...</div>
 
-
 ##### Bad
 
-
     <div class="block_mod">...</div>
-
 
 #### CSS
 
 ##### Use modifier class name as selector:
 
-
     .block_hidden { }
-
 
 ##### To alter elements based on a block-level modifier:
 
@@ -529,6 +488,18 @@ elem1 和 elem2 相對於 block
       text-align: center;
     }
 
+# 一些下次可以改進的點
+
+* 可能需要跟設計師協調設計稿的 breakpoint，會是希望可以套框架的 convension 可以善用 utilities class 用 class 就組出簡單的 style
+  * xs
+  * sm(min-width: 576px)
+  * md(min-width: 768px)
+  * lg(min-width: 992px)
+  * xl(min-width: 1200px)
+* 一開始就將所有頁面看完再開始寫，先將可以共用的 style 刻出來，再依照各個頁面不同的要求稍作調整，我一開始寫是一個頁面一個頁面刻，每次刻完一個頁面才發覺到其他頁面可以共用這個 style，但是為了共用 style 又必須稍做調整
+* 使用 rem 和 em 取代 px，這個有溝通過只是在設計的時候就用了 px 了，來不及
+* 再強一點之類的，我覺得以我寫完這個專案成長後的能力來重寫一次，可能只需要花一半的時間
+
 # References
 
 * [https://cythilya.github.io/2018/06/05/css-methodologies/](https://cythilya.github.io/2018/06/05/css-methodologies/ "https://cythilya.github.io/2018/06/05/css-methodologies/")
@@ -536,3 +507,4 @@ elem1 和 elem2 相對於 block
 * [https://css-tricks.com/lets-define-exactly-atomic-css/](https://css-tricks.com/lets-define-exactly-atomic-css/ "https://css-tricks.com/lets-define-exactly-atomic-css/")
 * [https://en.bem.info/methodology/quick-start/#guidelines-for-using-elements](https://en.bem.info/methodology/quick-start/#guidelines-for-using-elements "https://en.bem.info/methodology/quick-start/#guidelines-for-using-elements")
 * [https://www.smashingmagazine.com/2018/06/bem-for-beginners/](https://www.smashingmagazine.com/2018/06/bem-for-beginners/ "https://www.smashingmagazine.com/2018/06/bem-for-beginners/")
+* [https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506](https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506 "https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506")
