@@ -21,6 +21,11 @@ plugins:
   - jekyll-sitemap
   - font-awesome-sass
   - bulma-sass
+  - octopress-escape-code
+
+# octopress-escape-code
+
+escape_code: true
 
 # Jekyll-assets
 

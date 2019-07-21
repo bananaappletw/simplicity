@@ -1,11 +1,10 @@
 ---
-date: 2019-07-03T02:35:06.000+00:00
 title: official website review
-tags: []
+date: '2019-07-03 02:35:06 +0000'
 categories:
 - computer science
-
 ---
+
 # 釐清需求
 
 這次官網的目的是要做出一個靜態的網站
@@ -59,8 +58,6 @@ categories:
 
 `index.html`
 
-{% raw %}
-
     ---
         permalink: /
         i18n_prefix: index
@@ -70,11 +67,7 @@ categories:
     {% t title %}
     // hello
 
-{% endraw %}
-
 `zh/index.html`
-
-{% raw %}
 
 	---
     permalink: /zh
@@ -84,8 +77,6 @@ categories:
 
     {% t title %}
     // 你好
-
-{% endraw %}
 
 `_data/en.yml`
 
