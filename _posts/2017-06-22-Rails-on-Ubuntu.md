@@ -1,12 +1,12 @@
 ---
-
 title: Rails on Ubuntu
 author: bananaapple
 tags:
-  - ruby on rails
+- ruby on rails
 categories:
-  - computer science
-date: 2017-06-22 12:39:00
+- computer science
+date: 2017-06-22T12:39:00.000+00:00
+
 ---
 # Introduction
 
@@ -14,10 +14,10 @@ date: 2017-06-22 12:39:00
 這裡用的是最新版的 Ubuntu 17.04 server 版
 這篇會教你設定
 
-- nginx
-- passenger
-- Let's Encrypt(https)
-- postfix(mail server)
+* nginx
+* passenger
+* Let's Encrypt(https)
+* postfix(mail server)
 
 因為要設定 Let's Encrypt 和 postfix，所以要有一個 DNS 的 A Record 指向你的 ip 位置
 
@@ -31,11 +31,11 @@ date: 2017-06-22 12:39:00
 
 只有 passenger
 
-2. Nginx integration mode
+1. Nginx integration mode
 
 passenger 和 nginx 整合
 
-3. Apache integration mode
+1. Apache integration mode
 
 passenger 和 apache 整合
 
@@ -53,17 +53,15 @@ passenger 和 apache 整合
 `deb https://oss-binaries.phusionpassenger.com/apt/passenger xenial main` =>
 `deb https://oss-binaries.phusionpassenger.com/apt/passenger zesty main`
 
-```bash
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
-sudo apt-get install -y apt-transport-https ca-certificates
-
-# Add our APT repository
-sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger zesty main > /etc/apt/sources.list.d/passenger.list'
-sudo apt-get update
-
-# Install Passenger + Nginx
-sudo apt-get install -y nginx-extras passenger
-```
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
+    sudo apt-get install -y apt-transport-https ca-certificates
+    
+    # Add our APT repository
+    sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger zesty main > /etc/apt/sources.list.d/passenger.list'
+    sudo apt-get update
+    
+    # Install Passenger + Nginx
+    sudo apt-get install -y nginx-extras passenger
 
 ### Enable the passenger nginx module and restart nginx
 
@@ -71,9 +69,8 @@ sudo apt-get install -y nginx-extras passenger
 
 重啟 nginx
 
-```bash
-sudo service nginx restart
-```
+    sudo service nginx restart
+
 ### Notice
 
 另外網路上還有另一種裝 passenger 和 nginx 的方法
@@ -92,9 +89,7 @@ sudo service nginx restart
 
 ### Install postfix package
 
-```bash
-sudo apt install -y postfix
-```
+    sudo apt install -y postfix
 
 ### Configure postfix
 
@@ -102,21 +97,18 @@ sudo apt install -y postfix
 
 原本應該是
 
-```bash
-# TLS parameters
-smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
-smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-```
+    # TLS parameters
+    smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+    smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
 
 修改成
 
-```bash
-# TLS parameters
-smtpd_tls_cert_file=/etc/letsencrypt/live/bamboofox.nctucs.net/fullchain.pem
-smtpd_tls_key_file=/etc/letsencrypt/live/bamboofox.nctucs.net/privkey.pem
-smtp_tls_security_level=may
-smtpd_tls_security_level=may
-```
+    # TLS parameters
+    smtpd_tls_cert_file=/etc/letsencrypt/live/bamboofox.nctucs.net/fullchain.pem
+    smtpd_tls_key_file=/etc/letsencrypt/live/bamboofox.nctucs.net/privkey.pem
+    smtp_tls_security_level=may
+    smtpd_tls_security_level=may
+
 我的 domain name 是 `bamboofox.nctucs.net`，這裡要修改成自己的 domain name
 
 `smtp_tls_security_level=may` 和 `smtpd_tls_security_level=may` 是讓 email 寄信和收信加密
@@ -125,23 +117,17 @@ smtpd_tls_security_level=may
 
 修改 `/etc/postfix/main.cf`
 
-```bash
-mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
-```
+    mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
 
 修改成
 
-```bash
-mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 140.113.209.18 
-```
+    mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 140.113.209.18 
 
 這邊很重要因為之後用 `devise` 寄信的時候會有 `certification` 的問題
 
 ### Restart postfix
 
-```bash
-sudo service postfix restart
-```
+    sudo service postfix restart
 
 ## Deploy ruby on rails project
 
@@ -151,72 +137,57 @@ sudo service postfix restart
 
 ### Create deploy user
 
-```bash
-sudo adduser deploy
-sudo adduser deploy sudo
-su deploy
-```
+    sudo adduser deploy
+    sudo adduser deploy sudo
+    su deploy
 
 ### Install rvm
 
-```bash
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-\curl -sSL https://get.rvm.io | bash -s stable
-echo "source ~/.rvm/scripts/rvm" >> .bashrc
-source ~/.rvm/scripts/rvm
-rvm install 2.4.0
-rvm use 2.4.0 --default
-```
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+    \curl -sSL https://get.rvm.io | bash -s stable
+    echo "source ~/.rvm/scripts/rvm" >> .bashrc
+    source ~/.rvm/scripts/rvm
+    rvm install 2.4.0
+    rvm use 2.4.0 --default
+
 ### Install basic gems
 
-```bash
-gem install bundler
-gem install rails
-```
+    gem install bundler
+    gem install rails
 
 ### Show passenger config
 
 執行指令
 
-```bash
-passenger-config about ruby-command
-```
+    passenger-config about ruby-command
 
 會得到
 
-```bash
-passenger-config was invoked through the following Ruby interpreter:
-  Command: /home/deploy/.rvm/gems/ruby-2.4.0/wrappers/ruby
-  Version: ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-linux]
-  To use in Apache: PassengerRuby /home/deploy/.rvm/gems/ruby-2.4.0/wrappers/ruby
-  To use in Nginx : passenger_ruby /home/deploy/.rvm/gems/ruby-2.4.0/wrappers/ruby
-  To use with Standalone: /home/deploy/.rvm/gems/ruby-2.4.0/wrappers/ruby /usr/bin/passenger start
-```
+    passenger-config was invoked through the following Ruby interpreter:
+      Command: /home/deploy/.rvm/gems/ruby-2.4.0/wrappers/ruby
+      Version: ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-linux]
+      To use in Apache: PassengerRuby /home/deploy/.rvm/gems/ruby-2.4.0/wrappers/ruby
+      To use in Nginx : passenger_ruby /home/deploy/.rvm/gems/ruby-2.4.0/wrappers/ruby
+      To use with Standalone: /home/deploy/.rvm/gems/ruby-2.4.0/wrappers/ruby /usr/bin/passenger start
 
 這要用在等下的 nginx config
 
 ### Install nvm
 
-```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-nvm install stable
-```
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+    nvm install stable
 
 ### Install yarn
 
-```bash
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
-```
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    sudo apt-get update && sudo apt-get install yarn
 
 ### Create basic app
 
-```bash
-rails new myapp --webpack=react
-```
+    rails new myapp --webpack=react
 
 ### Deploy on nginx
 
@@ -224,33 +195,27 @@ rails new myapp --webpack=react
 
 這裡 secret 可以使用 `rake secret` 產生
 
-```bash
-production:
-  secret_key_base: d7913c3e87fadd4312ee1c5c1b13320caeecc72548f20b9122e2a1bf9ccdf0e9ecb86675168e578b5b3e960a81daa967c0081f69b082eb0c0e5df4b5810d71a9
-```
+    production:
+      secret_key_base: d7913c3e87fadd4312ee1c5c1b13320caeecc72548f20b9122e2a1bf9ccdf0e9ecb86675168e578b5b3e960a81daa967c0081f69b082eb0c0e5df4b5810d71a9
 
 修改 `/etc/nginx/sites-available/default`
 
-```bash
-server {
-
-        # SSL configuration
-        #
-        listen 443 ssl http2 default_server;
-        listen [::]:443 ssl http2 default_server;
-        include snippets/ssl-bamboofox.nctucs.net.conf;
-        include snippets/ssl-params.conf;
-		
-        # Add these three lines
-        
-        passenger_enabled on;
-        server_name bamboofox.nctucs.net;
-        root /home/deploy/myapp/public;
-}
-```
+    server {
+    
+            # SSL configuration
+            #
+            listen 443 ssl http2 default_server;
+            listen [::]:443 ssl http2 default_server;
+            include snippets/ssl-bamboofox.nctucs.net.conf;
+            include snippets/ssl-params.conf;
+    		
+            # Add these three lines
+            
+            passenger_enabled on;
+            server_name bamboofox.nctucs.net;
+            root /home/deploy/myapp/public;
+    }
 
 重啟 nginx
 
-```bash
-sudo service nginx restart
-```
+    sudo service nginx restart
