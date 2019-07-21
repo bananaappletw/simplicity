@@ -1,12 +1,11 @@
 ---
-
 title: useful tools
 tags:
-  - tool
+- tool
 categories: []
-date: 2016-03-22 13:40:00
----
+date: 2016-03-22T13:40:00.000+00:00
 
+---
 # markdown online editor
 
 ## hackmd
@@ -23,9 +22,9 @@ https://hackmd.io/
 
 再用 markdown 的寫法將圖片插入
 
-```
-![](圖片網址)
-```
+
+    ![](圖片網址)
+
 ## hackpad
 
 https://hackpad.com/
