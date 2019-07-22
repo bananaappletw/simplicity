@@ -438,6 +438,78 @@ elem1 和 elem2 相對於 block
         </div>
     </form>
 
+### Block in Block
+
+[https://gist.github.com/Integralist/4960210](https://gist.github.com/Integralist/4960210 "https://gist.github.com/Integralist/4960210")
+
+#### HTML
+
+    <div class="blocka">
+    	<div class="blocka__blockb">
+        	<div class="blocka__blockb__elementb>
+            </div>
+        </div>
+    </div>
+
+#### Alternative HTML(1)
+
+    <div class="blocka">
+    	<div class="blocka__elementa blockb">
+        	<div class="blockb__elementb>
+            </div>
+        </div>
+    </div>
+
+以 blocka__elementa 來代表和 blocka 的關係
+
+#### Alternative HTML(2)
+
+    <div class="blocka">
+    	<div class="blockb">
+        	<div class="blockb__elementb>
+            </div>
+        </div>
+    </div>
+
+如果 blocka 和 blockb 沒有相對關係的話可以省略 blocka-elementa
+
+### Block container
+
+#### HTML
+
+    <div class="product-container>
+        <div class="product>
+            <div class="product__content">
+            </div>
+        </div>
+    </div>
+
+#### Alternative HTML(1)
+
+    <div class="product>
+        <div class="product__inner>
+            <div class="product__content">
+            </div>
+        </div>
+    </div>
+
+將 product 往上拉一層
+
+#### Alternative HTML(2)
+
+    <div class="product-container>
+        <div class="product>
+            <div class="product__content">
+            </div>
+        </div>
+    </div>
+
+不予理會 product-container 和 product 的關係
+
+我自己是比較喜歡這個寫法
+
+主要的分界點是在於 product 是否能獨立存在 product-container 外
+
 ### Don't use nested selectors
 
 只有你要改變 element 的 style based on block 的 modifier 的時候
@@ -554,3 +626,4 @@ elem1 和 elem2 相對於 block
 * [https://www.smashingmagazine.com/2018/06/bem-for-beginners/](https://www.smashingmagazine.com/2018/06/bem-for-beginners/ "https://www.smashingmagazine.com/2018/06/bem-for-beginners/")
 * [https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506](https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506 "https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506")
 * [https://zellwk.com/blog/css-architecture-1/](https://zellwk.com/blog/css-architecture-1/ "https://zellwk.com/blog/css-architecture-1/")
+* [https://gist.github.com/Integralist/4960210](https://gist.github.com/Integralist/4960210 "https://gist.github.com/Integralist/4960210")
