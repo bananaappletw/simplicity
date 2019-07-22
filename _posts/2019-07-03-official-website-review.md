@@ -605,6 +605,14 @@ elem1 和 elem2 相對於 block
     <div class="muzukashii-block">
     </div>
 
+### Don't use semantic element as selector
+
+這點其實我也蠻同意的
+
+因為像是 h1 h2 這些 element 會依賴本身自己的預設 style
+
+這樣你的 style 就會隨著 html 變
+
 # CSS 感想
 
 盡量讓元素都在同一層
