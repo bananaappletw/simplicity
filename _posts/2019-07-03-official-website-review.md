@@ -1,6 +1,6 @@
 ---
 title: official website review
-date: 2019-07-03 02:35:06 +0000
+date: 2019-07-03T02:35:06.000+00:00
 categories:
 - computer science
 tags: []
@@ -604,6 +604,12 @@ elem1 和 elem2 相對於 block
 
     <div class="muzukashii-block">
     </div>
+
+# CSS 感想
+
+盡量讓元素都在同一層
+
+讓 CSS 的 import order 來覆蓋相同的屬性
 
 # 一些下次可以改進的點
 
