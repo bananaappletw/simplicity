@@ -553,3 +553,4 @@ elem1 和 elem2 相對於 block
 * [https://en.bem.info/methodology/quick-start/#guidelines-for-using-elements](https://en.bem.info/methodology/quick-start/#guidelines-for-using-elements "https://en.bem.info/methodology/quick-start/#guidelines-for-using-elements")
 * [https://www.smashingmagazine.com/2018/06/bem-for-beginners/](https://www.smashingmagazine.com/2018/06/bem-for-beginners/ "https://www.smashingmagazine.com/2018/06/bem-for-beginners/")
 * [https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506](https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506 "https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506")
+* [https://zellwk.com/blog/css-architecture-1/](https://zellwk.com/blog/css-architecture-1/ "https://zellwk.com/blog/css-architecture-1/")
