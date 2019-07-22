@@ -440,7 +440,7 @@ elem1 和 elem2 相對於 block
 
 ### Don't use nested selectors
 
-只有你要改變 element 的 style based on block 的 modifier
+只有你要改變 element 的 style based on block 的 modifier 的時候
 
     .button_hovered .button__text
     {
@@ -449,6 +449,35 @@ elem1 和 elem2 相對於 block
     .button_theme_islands .button__text
     {
       line-height: 1.5;
+    }
+
+或是你可以把原本的 SCSS 用 `@at-root` 改寫
+
+既可以用巢狀結構包起來但是輸出卻不是 nested
+
+#### bad SCSS
+
+    .block{
+    	.block__element{
+        	...
+        }
+    }
+
+#### Good SCSS
+
+    .block{
+    	@at-root #{&}__element{
+        	...
+        }
+    }
+
+#### Good CSS Output
+
+    .block{
+    	...
+    }
+    .block__element{
+        ...
     }
 
 ### Don't use combined selectors
