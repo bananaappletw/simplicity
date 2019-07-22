@@ -493,7 +493,7 @@ elem1 和 elem2 相對於 block
         </div>
     </div>
 
-將 product 往上拉一層
+將 product 往上拉一層原本的用 product__inner 取代
 
 #### Alternative HTML(2)
 
