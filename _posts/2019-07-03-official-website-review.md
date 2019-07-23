@@ -625,6 +625,8 @@ elem1 和 elem2 相對於 block
 
 他們改回用 - 分隔了
 
+當然如果能用 [CSS Module](https://css-tricks.com/css-modules-part-1-need/) 是最好的拉
+
 # 一些下次可以改進的點
 
 * 可能需要跟設計師協調設計稿的 breakpoint，會是希望可以套框架的 convension 可以善用 utilities class 用 class 就組出簡單的 style
@@ -647,3 +649,4 @@ elem1 和 elem2 相對於 block
 * [https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506](https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506 "https://medium.com/@yanglin_68397/%E5%A5%BD%E7%94%A8%E7%9A%84-bootstrap-4-utilities-class-79484fa4c506")
 * [https://zellwk.com/blog/css-architecture-1/](https://zellwk.com/blog/css-architecture-1/ "https://zellwk.com/blog/css-architecture-1/")
 * [https://gist.github.com/Integralist/4960210](https://gist.github.com/Integralist/4960210 "https://gist.github.com/Integralist/4960210")
+* [https://css-tricks.com/css-modules-part-1-need/](https://css-tricks.com/css-modules-part-1-need/ "https://css-tricks.com/css-modules-part-1-need/")
