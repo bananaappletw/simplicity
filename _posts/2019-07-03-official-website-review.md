@@ -619,6 +619,12 @@ elem1 和 elem2 相對於 block
 
 讓 CSS 的 import order 來覆蓋相同的屬性
 
+後來想了一下其實 BEM 可能沒有比較好
+
+又再去看了一次 youtube 的網站
+
+他們改回用 - 分隔了
+
 # 一些下次可以改進的點
 
 * 可能需要跟設計師協調設計稿的 breakpoint，會是希望可以套框架的 convension 可以善用 utilities class 用 class 就組出簡單的 style
