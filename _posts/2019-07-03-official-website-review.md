@@ -165,7 +165,7 @@ tags: []
 
 我大概寫了三天放棄了
 
-這個方法是行不通的配上 jekyll-pagination-v2 的話
+這個方法是行不通的如果要用 jekyll-pagination-v2 的話
 
 我猜可能用原生的 pagination 有可能可以
 
