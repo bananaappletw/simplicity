@@ -578,15 +578,15 @@ elem1 和 elem2 相對於 block
 
 #### Specific page HTML
 
-	<div class="index-page-button button button_active">
+    <div class="index-page-button button button_active">
     </div>
-    
+
 #### Specific page CSS
-    
+
     .index-page-button{
     	...
     }
-    
+
 共用 button 的 style 將特定頁面的 style 寫在 index-page-button 裡
 
 但是你會發覺蓋不過去 button 的 modifier 因為 button_active 和 button_theme_islands 的 Specificity
@@ -601,13 +601,11 @@ elem1 和 elem2 相對於 block
 
 可以這樣寫利用 css import 的 order 來決定複寫的優先程度
 
-	// component (button)
-	@import "component";
+    // component (button)
+    @import "component";
     
     // Specific page(index)
     @import "index";
-    
-
 
 #### Exception
 
@@ -650,7 +648,6 @@ elem1 和 elem2 相對於 block
 HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic_elements.asp) 但是現在能表示的語意還是比較有限
 
 用 class name 去表示比較清楚
-
 
 # 對於簡單和複雜的元素的策略
 
@@ -696,7 +693,6 @@ HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic
   * xl(min-width: 1200px)
 * 一開始就將所有頁面看完再開始寫，先將可以共用的 style 刻出來，再依照各個頁面不同的要求稍作調整，我一開始寫是一個頁面一個頁面刻，每次刻完一個頁面才發覺到其他頁面可以共用這個 style，但是為了共用 style 又必須稍做調整
 * 使用 rem 和 em 取代 px，這個有溝通過只是在設計的時候就用了 px 了，來不及
-* 再強一點之類的，我覺得以我寫完這個專案成長後的能力來重寫一次，可能只需要花一半的時間
 
 # References
 
