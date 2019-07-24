@@ -117,7 +117,7 @@ tags: []
 
 使用這個套件 [https://github.com/sverrirs/jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2 "https://github.com/sverrirs/jekyll-paginate-v2")
 
-這個套件能夠依照 category 和 tag 來產生 pagination
+這個套件能夠依照 locale 和 category 和 tag 來產生 pagination
 
 `index.html`
 
