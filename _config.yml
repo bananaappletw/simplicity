@@ -1,5 +1,6 @@
 # Blog config
 
+title: bananaappletw
 url: bananaappletw.github.io
 date_format: "%b %-d, %Y"
 host: 0.0.0.0
