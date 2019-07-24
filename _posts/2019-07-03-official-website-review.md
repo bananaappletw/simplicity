@@ -136,10 +136,12 @@ tags: []
     layout: resource
     permalink: /
     pagination:
-    	categories: resource
+        categories:
+        - resource
         per_page: 5
         enabled: true
         locale: en
+    
     ---
 
 `resource-browse-by-tag-technical`
@@ -148,8 +150,10 @@ tags: []
     layout: resource-browse-by-tag-technical
     permalink: /
     pagination:
-    	categories: resource
-        tags: technical
+        categories:
+        - resource
+        tags:
+        - technical
         per_page: 5
         enabled: true
         locale: en
