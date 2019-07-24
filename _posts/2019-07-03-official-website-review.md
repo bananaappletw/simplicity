@@ -565,11 +565,49 @@ elem1 和 elem2 相對於 block
 
 你必須將兩個 modifier 拉到同樣 .button 的 level 才能有相同的 CSS 權重
 
+#### Bad SCSS
+
+    .button {
+    	.button_active{
+        	...
+        }
+        .button_theme_islands{
+        	...
+        }        
+    }
+
+#### Specific page HTML
+
+	<div class="index-page-button button button_active">
+    </div>
+    
+#### Specific page CSS
+    
+    .index-page-button{
+    	...
+    }
+    
+共用 button 的 style 將特定頁面的 style 寫在 index-page-button 裡
+
+但是你會發覺蓋不過去 button 的 modifier 因為 button_active 和 button_theme_islands 的 Specificity
+
+都比 index-page-button 高
+
 #### Good CSS
 
     .button_theme_islands {}
     .button_active {}
     .button {}
+
+可以這樣寫利用 css import 的 order 來決定複寫的優先程度
+
+	// component (button)
+	@import "component";
+    
+    // Specific page(index)
+    @import "index";
+    
+
 
 #### Exception
 
