@@ -589,22 +589,6 @@ elem1 和 elem2 相對於 block
       text-align: center;
     }
 
-# 對於簡單和複雜的元素的策略
-
-簡單的元素可以想辦法用 utilities class 來達成
-
-## HTML
-
-    <div class="once-block font-bold text-align-center">
-    </div>
-
-複雜的元素其實就比較適合自己寫成一個 class 並撰寫 style，不然你的 html 裡的 class 可能就會太多，很複雜不好維護
-
-## HTML
-
-    <div class="muzukashii-block">
-    </div>
-
 ### Don't use tag selector
 
 #### HTML
@@ -629,6 +613,25 @@ HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic
 
 用 class name 去表示比較清楚
 
+
+# 對於簡單和複雜的元素的策略
+
+簡單的元素可以想辦法用 utilities class 來達成
+
+## HTML
+
+    <div class="once-block font-bold text-align-center">
+    </div>
+
+複雜的元素其實就比較適合自己寫成一個 class 並撰寫 style，不然你的 html 裡的 class 可能就會太多，很複雜不好維護
+
+## HTML
+
+    <div class="muzukashii-block">
+    </div>
+
+\###
+
 # CSS 感想
 
 盡量讓元素都在同一層
@@ -642,6 +645,8 @@ HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic
 他們改回用 - 分隔了
 
 當然如果能用 [CSS Module](https://css-tricks.com/css-modules-part-1-need/) 是最好的拉
+
+這樣 class 名字都不會撞
 
 # 一些下次可以改進的點
 
