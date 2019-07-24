@@ -117,6 +117,8 @@ tags: []
 
 使用這個套件 [https://github.com/sverrirs/jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2 "https://github.com/sverrirs/jekyll-paginate-v2")
 
+這個套件能夠依照 category 和 tag 來產生 pagination
+
 `index.html`
 
     ---
@@ -127,6 +129,55 @@ tags: []
         enabled: true
         locale: en
     ---
+
+`resource.html`
+
+    ---
+    layout: resource
+    permalink: /
+    pagination:
+    	categories: resource
+        per_page: 5
+        enabled: true
+        locale: en
+    ---
+
+`resource-browse-by-tag-technical`
+
+    ---
+    layout: resource-browse-by-tag-technical
+    permalink: /
+    pagination:
+    	categories: resource
+        tags: technical
+        per_page: 5
+        enabled: true
+        locale: en
+    ---
+
+這邊用比較智障的方法產生 browse by tag 的網頁
+
+原本是想說用 Jekyll 的 generator plugin 先把某個 category 的文章 tag 拿出來，然後依照 tag 產生 page
+
+我大概寫了三天放棄了
+
+這個方法是行不通的配上 jekyll-pagination-v2 的話
+
+我猜可能用原生的 pagination 有可能可以
+
+但是沒有想要去嘗試了
+
+Jekyll 有個爛的點就是他的 plugin 都是要用猜的去寫
+
+我的方法是去參考現在有的各個 plugin
+
+然後開 [Jekyll::Page](https://www.rubydoc.info/github/jekyll/jekyll/Jekyll/Page) 的文件邊寫邊猜
+
+# 給上稿人員使用的網站
+
+很推薦這個網站 [https://forestry.io/](https://forestry.io/ "https://forestry.io/")
+
+其實 i18n 的作法就是這個網站的文章
 
 # CSS 小技巧或是
 
@@ -669,7 +720,7 @@ HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic
 
 ## Bad HTML
 
-	<header class="navber">    
+    <header class="navber">    
         <div class="navbar-menu">        
             <div class="navbar-menu-item>
             	<div class="navbar-menu-item-submenu">
@@ -679,10 +730,10 @@ HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic
             </div>
         </div>
     </header>
-    
+
 ## Good HTML
 
-	<header class="navber">    
+    <header class="navber">    
         <div class="navbar-menu">        
             <div class="navbar-item>
             	<div class="navbar-submenu">
@@ -692,7 +743,7 @@ HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic
             </div>
         </div>
     </header>
-    
+
 這個我自己是覺得比較主觀的想法不一定符合 convension
 
 寫 class 的關鍵就是不要撞名
