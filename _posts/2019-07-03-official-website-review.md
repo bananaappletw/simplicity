@@ -605,13 +605,29 @@ elem1 和 elem2 相對於 block
     <div class="muzukashii-block">
     </div>
 
-### Don't use semantic element as selector
+### Don't use tag selector
 
-這點其實我也蠻同意的
+#### HTML
 
-因為像是 h1 h2 這些 element 會依賴本身自己的預設 style
+    <header>
+      <a href="/">
+        <img src="img.logo.png" alt="Logo">
+      </a>
+    </header>
 
-這樣你的 style 就會隨著 html 變
+#### SCSS
+
+    header{
+    	a{
+        	...
+        }
+    }
+
+像這樣的命名方式很難讓人去聯想 header 和 a 之間的關係
+
+HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic_elements.asp) 但是現在能表示的語意還是比較有限
+
+用 class name 去表示比較清楚
 
 # CSS 感想
 
