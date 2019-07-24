@@ -665,7 +665,43 @@ HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic
     <div class="muzukashii-block">
     </div>
 
-\###
+# Nested nested block and element
+
+## Bad HTML
+
+	<header class="navber">    
+        <div class="navbar-menu">        
+            <div class="navbar-menu-item>
+            	<div class="navbar-menu-item-submenu">
+                	<div class="navbar-menu-item--submenu-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+## Good HTML
+
+	<header class="navber">    
+        <div class="navbar-menu">        
+            <div class="navbar-item>
+            	<div class="navbar-submenu">
+                	<div class="navbar-submenu-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+這個我自己是覺得比較主觀的想法不一定符合 convension
+
+寫 class 的關鍵就是不要撞名
+
+主要的概念是 namespace 將這整個 navbar component 關在 navbar 這個 namespace 下
+
+在適當的層數切成另一個新的 block
+
+只要每個元素都關在 navbar namespace 底下就不會和其他元件撞名
 
 # CSS 感想
 
