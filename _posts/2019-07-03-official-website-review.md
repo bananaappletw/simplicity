@@ -220,7 +220,7 @@ Jekyll 有個爛的點就是他的 plugin 都是要用猜的去寫
     	<img src="...">
     </div>
 
-### CSS
+### Original CSS
 
     .ratio-box{
         overflow: hidden;
@@ -235,6 +235,21 @@ Jekyll 有個爛的點就是他的 plugin 都是要用猜的去寫
           top: 50%;
           transform: translateY(-50%);
           width: 100%;
+        }
+    }
+
+### Inspired by one of my friend's CSS
+
+    .ratio-box{
+        &::after {
+          content: "";
+          display: block;
+          padding-top: 75%;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
         }
     }
 
