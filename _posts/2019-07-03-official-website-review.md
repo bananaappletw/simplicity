@@ -743,7 +743,7 @@ HTML 雖然有 [semantic elements](https://www.w3schools.com/html/html5_semantic
         <div class="navbar-menu">        
             <div class="navbar-menu-item>
             	<div class="navbar-menu-item-submenu">
-                	<div class="navbar-menu-item--submenu-item>
+                	<div class="navbar-menu-item-submenu-item>
                     </div>
                 </div>
             </div>
