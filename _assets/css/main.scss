@@ -1,9 +1,9 @@
 @charset "utf-8";
-@import "bulma";
-@import
-  "simplicity/custom"
-;
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bulma";
 @import "bulma-accordion";
+@import "layout";
+@import "custom";
+@import "page-banner";
+@import "index";

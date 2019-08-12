@@ -1,7 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {% include head.html %}
-  <body>
-    {{ content }}
-  </body>
-</html>
+---
+layout: base
+---
+{% include header.html %}
+<main class="main {{page.layout}}-layout">
+  {{content}}
+</main>
+{% include footer.html %}

@@ -9,6 +9,11 @@ host: 0.0.0.0
 defaults:
   -
     scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
       path: "_posts"
       type: "posts"
     values:

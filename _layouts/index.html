@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<figure class="profile-image image is-256x256">
+    {% asset "profile.jpg" class="is-rounded"%}
+</figure>
+<div class="content has-text-centered has-text-light">
+    <p class="title">
+        Programmable animal - sea cucumber
+    </p>
+    <p>
+        #bananaappletw
+    </p>
+    <p class="social-media-links">
+        {% if site.facebook %}
+        <a href="{{site.facebook}}">
+            <span class="icon">
+                <i class="fab fa-facebook"></i>
+            </span>
+            Facebook
+        </a>
+        {% endif %}
+        {% if site.github %}
+        <a href="{{ site.github }}">
+            <span class="icon">
+                <i class="fab fa-github"></i>
+            </span>
+            Github
+        </a>
+        {% endif %}
+        {% if site.linkedin %}
+        <a href="{{ site.linkedin }}">
+            <span class="icon">
+                <i class="fab fa-linkedin"></i>
+            </span>
+            Linkedin
+        </a>
+        {% endif %}
+        {% if site.stack_overflow %}
+        <a href="{{ site.stack_overflow }}">
+            <span class="icon">
+                <i class="fab fa-stack-overflow"></i>
+            </span>
+            Stack Overflow
+        </a>
+        {% endif %}
+        {% if site.twitter %}
+        <a href="{{ site.twitter }}">
+            <span class="icon">
+                <i class="fab fa-twitter"></i>
+            </span>
+            Twitter
+        </a>
+        {% endif %}
+    </p>
+    <a class="button" href="{{ "/blog" | relative_url }}">
+        Read my articles
+    </a>
+</div>

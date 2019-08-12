@@ -1,22 +1,17 @@
 ---
 layout: default
 ---
-{% include header.html %}
-<section class="hero is-medium is-black is-bold">
-  <div class="hero-body banner">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        {{ page.title | capitalize | escape }}
-      </h1>
-    </div>
+<div class="page-banner">
+  {% asset "banner.jpg" %}
+  <div class="page-banner-content title">
+    {{ page.title | capitalize | escape }}
   </div>
-</section>
-<main id="main" class="section has-background-grey-darker">
-<section class="container is-fluid">
-  <section class="section">
-    {{ content }}
+</div>
+<section class="section has-background-grey-darker">
+  <section class="container is-fluid">
+    <section class="section">
+      {{ content }}
+    </section>
+    {% include disqus_comments.html %}
   </section>
-  {% include disqus_comments.html %}
 </section>
-</main>
-{% include footer.html %}

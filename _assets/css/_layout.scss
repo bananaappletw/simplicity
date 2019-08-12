@@ -1,0 +1,16 @@
+body{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  flex: none;
+}
