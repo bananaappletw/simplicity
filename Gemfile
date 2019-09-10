@@ -10,7 +10,7 @@ group :jekyll_plugins do
    gem "jekyll-tagging"
    gem "font-awesome-sass"
    gem "bulma-sass"
-   gem "octopress-escape-code"
+   gem "octopress-escape-code", github: "bananaappletw/escape-code"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
