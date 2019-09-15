@@ -1,5 +1,5 @@
-$pagination-current-color: $link;
-$pagination-background-color: $white;
+$pagination-current-color: #3d9fe0;
+$pagination-background-color: white;
 .work-card {
   width: 300px;
   height: 100%;
@@ -19,33 +19,13 @@ $pagination-background-color: $white;
 }
 
 .page-banner {
-  background-color: black;
-  position: relative;
-
-  &::after {
-    content: "";
-    display: block;
-    padding-top: 20%;
-  }
-
-  img {
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    height: 100%;
-  }
-}
-
-.page-banner-content{
-  color: white;
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto
+  height: 200px;
+  background-color: #3d9fe0;
+}
+
+.page-banner-content {
+  color: white;
 }

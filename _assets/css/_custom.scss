@@ -1,18 +1,15 @@
 $pagination-current-color: $link;
 $pagination-background-color: $white;
 
-html{
+html {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-.work-card
-{
+.work-card {
   width: 300px;
   height: 100%;
-  .card-image
-  {
-    img
-    {
+  .card-image {
+    img {
       height: 150px;
     }
     display: flex;
@@ -21,17 +18,7 @@ html{
   }
 }
 
-.talk-card
-{
+.talk-card {
   width: 300px;
   height: 100%;
-}
-
-.banner
-{
-  background-image: asset_url("banner.jpg");
-//  background-image: linear-gradient(to bottom, hsla(0, 0%, 21%,0.6) 0%,hsla(0, 0%, 21%,0.6) 100%), asset_url("banner.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
 }

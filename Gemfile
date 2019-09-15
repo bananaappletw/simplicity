@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 
+gem "jekyll"
 group :jekyll_plugins do
-   gem "jekyll-admin"
    gem "jekyll-assets"
    gem "jekyll-coffeescript"
    gem "jekyll-feed"
    gem "jekyll-paginate-v2"
-   gem "jekyll-sitemap"
    gem "jekyll-tagging"
    gem "font-awesome-sass"
    gem "bulma-sass"
