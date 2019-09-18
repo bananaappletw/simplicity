@@ -1,5 +1,5 @@
 ---
-date: 2019-07-11 15:09:39 +0000
+date: 2019-07-11T15:09:39.000+00:00
 title: MySQL document
 tags: []
 categories:
@@ -8,7 +8,7 @@ categories:
 ---
 # Locking reads
 
-## `[SELECT ... FOR SHARE](https://dev.mysql.com/doc/refman/8.0/en/select.html "13.2.10 SELECT Syntax")`
+## [SELECT ... FOR SHARE](https://dev.mysql.com/doc/refman/8.0/en/select.html "13.2.10 SELECT Syntax")
 
 共享鎖，主要用來保證資料的完整性
 
