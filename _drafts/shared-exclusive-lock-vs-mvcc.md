@@ -5,3 +5,4 @@ tags: []
 categories: []
 
 ---
+Shared-exclusive Lock 和 MVCC 是兩種
